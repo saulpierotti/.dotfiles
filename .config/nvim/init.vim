@@ -1,57 +1,54 @@
-"for compatibility with vim
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-
-"set system clipboard
-set clipboard+=unnamedplus
-
-"from my old .vimrc-----------------------------------------------------------------------
-
 let mapleader =" "
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+" need when conda is active
+let g:python3_host_prog = '/usr/bin/python'
 
-" for gvim
-set guifont=Source\ Code\ Pro
+" set system clipboard
+set clipboard+=unnamedplus
 
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
+" activate mouse
+set mouse=a
 
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'thinca/vim-quickrun'			"allows execution of code in a separate window
-Plugin 'vim-latex/vim-latex'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'			" git wrapper for vim
-Plugin 'plasticboy/vim-markdown'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer'}
-Plugin 'w0rp/ale'
-Plugin 'SirVer/ultisnips'
-Plugin 'lervag/vimtex'
-Plugin 'thaerkh/vim-indentguides'
-Plugin 'tpope/vim-surround'
-Plugin 'tmhedberg/simpylfold'
-Plugin 'python-mode/python-mode'
-Plugin 'kamykn/spelunker.vim'
+" set cwd to the one open
+set autochdir
+
+" all plugins here, managed by vim-plugged
+call plug#begin('~/.vim/plugged')
+
+Plug 'tmhedberg/SimpylFold'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'thinca/vim-quickrun'			"allows execution of code in a separate window
+Plug 'vim-latex/vim-latex'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'			" git wrapper for vim
+Plug 'plasticboy/vim-markdown'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer'}
+Plug 'w0rp/ale'
+Plug 'SirVer/ultisnips'
+Plug 'lervag/vimtex'
+Plug 'thaerkh/vim-indentguides'
+Plug 'tpope/vim-surround'
+Plug 'tmhedberg/simpylfold'
+Plug 'python-mode/python-mode'
+Plug 'kamykn/spelunker.vim'
+Plug 'psf/black', { 'tag': '19.10b0' }
+Plug 'tomtom/tcomment_vim'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'junegunn/goyo.vim'
+Plug 'Raimondi/delimitMate'
+
 " colorschemes
-Plugin 'morhetz/gruvbox'	"color scheme
-Plugin 'tomasr/molokai'
-Plugin 'sjl/badwolf'
-Plugin 'gosukiwi/vim-atom-dark'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'junegunn/goyo.vim'
+Plug 'morhetz/gruvbox'	"color scheme
+Plug 'tomasr/molokai'
+Plug 'sjl/badwolf'
+Plug 'gosukiwi/vim-atom-dark'
+Plug 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()
 
 " some basics
 set nocompatible              " required
@@ -63,11 +60,6 @@ set nospell
 set encoding=utf-8
 set number relativenumber
 set hlsearch
-
-" for gvim
-set guioptions-=m  "menu bar
-set guioptions-=T  "toolbar
-set guioptions-=r  "scrollbar
 
 " enable autocompletion
 set wildmode=longest,list,full
@@ -125,7 +117,6 @@ let g:enable_spelunker_vim=0
 " call the complier script and show the output
 nnoremap <leader>c : !compiler.sh %:p<CR>
 nnoremap <leader>p : !show_output.sh %:p<CR><CR>
-nnoremap <leader>t : vert terminal<CR>
 
 " configure cross-program copy-paste
 " this requires gvim installed
@@ -164,10 +155,6 @@ let g:airline_symbols.linenr = ''
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" python-specific configs
-autocmd BufWritePre *.py execute ':Black'
-
-let g:black_linelength=80
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -189,33 +176,6 @@ autocmd VimLeave *.tex !texclear.sh %
 let g:vim_markdown_math = 1
 let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_auto_insert_bullets = 0
-
-" change font size
-let g:fnt_type = 'Source\ Code\ Pro'
-let g:fnt_size = 11
-
-" all of this required only for gvim
-"function! ResetFont ()
-"  if has('gui_running')
-"    exe ':set guifont=' . g:fnt_type . '\ ' . string(g:fnt_size)
-"  endif
-"endfunction
-"
-"call ResetFont()
-"
-"function! FontSizePlus ()
-"  let g:fnt_size = g:fnt_size + 0.5
-"  call ResetFont()
-"endfunction
-"
-"function! FontSizeMinus ()
-"  let g:fnt_size = g:fnt_size - 0.5
-"  call ResetFont()
-"endfunction
-"
-"nnoremap <C-ScrollWheelUp> :call FontSizePlus()<cr>
-"nnoremap <C-ScrollWheelDown> :call FontSizeMinus()<cr>
-
 " zathura forward search
 function! SyncTexForward()
     let execstr = "silent !zathura --synctex-forward ".line(".").":".col(".").":%:p %:p:r.pdf &"
@@ -230,3 +190,41 @@ let g:vimtex_view_method = 'zathura'
 
 " for removing search highlight by hitting ESC
 nnoremap <esc> :noh<return><esc>
+
+" format with :Black when saving py files
+autocmd BufWritePre *.py execute ':Black'
+
+" config for terminal mode
+let s:term_buf = 0
+let s:term_win = 0
+
+function! TermToggle(height)
+    if win_gotoid(s:term_win)
+        hide
+    else
+        new terminal
+        exec "resize " . a:height
+        try
+            exec "buffer " . s:term_buf
+            exec "bd terminal"
+            set nonumber norelativenumber
+            set signcolumn=no
+            set nocursorline
+        catch
+            call termopen($SHELL, {"detach": 0})
+            let s:term_buf = bufnr("")
+            set nonumber norelativenumber
+            set signcolumn=no
+            set nocursorline
+        endtry
+        startinsert!
+        let s:term_win = win_getid()
+    endif
+endfunction
+
+nnoremap <silent><A-t> :call TermToggle(12)<CR>
+inoremap <silent><A-t> <Esc>:call TermToggle(12)<CR>
+tnoremap <silent><A-t> <C-\><C-n>:call TermToggle(12)<CR>
+
+" YouCompleteMe confs
+let g:ycm_autoclose_preview_window_after_insertion = 1
