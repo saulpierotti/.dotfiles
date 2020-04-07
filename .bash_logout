@@ -1,1 +1,3 @@
-/home/saul/.bash_logout
+#
+# ~/.bash_logout
+#
