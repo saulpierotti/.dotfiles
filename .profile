@@ -1,3 +1,1 @@
-#
-# ~/.profile
-#
+/home/saul/.profile
