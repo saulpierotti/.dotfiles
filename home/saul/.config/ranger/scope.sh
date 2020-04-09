@@ -39,18 +39,6 @@ HIGHLIGHT_TABWIDTH=8
 HIGHLIGHT_STYLE='pablo'
 PYGMENTIZE_STYLE='autumn'
 
-# Abort display for big files
-drop_bigsize() {
-    # 51200 == 50 MB * 1024
-    # change this number for different sizes
-    if [[ `du "${FILE_PATH}" | cut -f1` -gt 5120 ]]; then
-	head -30 "${FILE_PATH}"
-        echo '-----FILE SIZE EXCEEDS PREWIEW LIMIT-----'
-        exit 0
-    fi
-}
-
-
 handle_extension() {
     case "${FILE_EXTENSION_LOWER}" in
         # Archive
@@ -177,12 +165,11 @@ handle_fallback() {
     exit 1
 }
 
-drop_bigsize
-
 MIMETYPE="$( file --dereference --brief --mime-type -- "${FILE_PATH}" )"
 if [[ "${PV_IMAGE_ENABLED}" == 'True' ]]; then
     handle_image "${MIMETYPE}"
 fi
+
 handle_extension
 handle_mime "${MIMETYPE}"
 handle_fallback
