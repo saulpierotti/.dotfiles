@@ -60,16 +60,6 @@ bindkey '^e' edit-command-line
 bindkey '^R' history-incremental-search-backward
 
 # Use ranger to switch directories and bind it to ctrl-o
-# the function avoids nested instances
-explorer () {
-    tmp="$(mktemp)"
-    ranger --choosedir="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
-bindkey -s '^o' 'explorer\n'
+bindkey -s '^o' 'source ranger_launcer.sh\n'
 
 bindkey -s '^[^o' 'sudo ranger\n'
