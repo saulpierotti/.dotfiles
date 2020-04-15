@@ -195,6 +195,7 @@ nnoremap <esc> :noh<return><esc>
 autocmd BufWritePre *.py execute ':Black'
 
 " config for terminal mode
+set shell=$SHELL
 let s:term_buf = 0
 let s:term_win = 0
 

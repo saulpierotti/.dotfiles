@@ -60,6 +60,6 @@ bindkey '^e' edit-command-line
 bindkey '^R' history-incremental-search-backward
 
 # Use ranger to switch directories and bind it to ctrl-o
-bindkey -s '^o' 'source ranger_launcer.sh\n'
+bindkey -s '^o' 'source ranger_launcher.sh\n'
 
-bindkey -s '^[^o' 'sudo ranger\n'
+bindkey -s '^[^o' 'source ranger_launcher_sudo.sh\n'
