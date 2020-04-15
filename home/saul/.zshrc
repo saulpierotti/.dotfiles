@@ -7,12 +7,12 @@ antigen use oh-my-zsh
 # plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle git
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle esc/conda-zsh-completion 
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
 antigen bundle autojump
+antigen bundle esc/conda-zsh-completion 
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
 
 # Tell Antigen that you're done.
 antigen apply
