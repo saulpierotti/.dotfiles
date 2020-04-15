@@ -50,6 +50,11 @@ SAVEHIST=1000
 
 # vim mode
 bindkey -v
+export KEYTIMEOUT=1
+
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
 
 # reverse search
 bindkey '^R' history-incremental-search-backward
