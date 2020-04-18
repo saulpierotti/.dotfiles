@@ -16,7 +16,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
 
 # conda configs -----------------------------------------------------
-source .condainit
+source /home/saul/.condainit
 
 # load startup file---------------------------------------------------
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
@@ -26,7 +26,7 @@ fi
 # Manual configs------------------------------------------------------------------------------------
 
 # Load my aliases
-source ~/.zsh_aliases
+source /home/saul/.zsh_aliases
 
 # history (copied from autoconfig)
 HISTFILE=~/.histfile
