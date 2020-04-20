@@ -1,4 +1,4 @@
 numlockx &
 /usr/bin/prime-offload
-i3
+exec $WM
 sudo /usr/bin/prime-switch

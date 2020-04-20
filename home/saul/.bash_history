@@ -67,3 +67,11 @@ echo "aaa"
 echo $?
 sort -gk 11 human_SP_no_Kunitz.bl8|head
 echo $?
+gnome-session
+startx
+exit
+v .xinitrc 
+nvim .xinitrc 
+q
+q
+exit
