@@ -29,5 +29,8 @@ export EMAIL_4_TCOFFEE="saulpierotti@gmail.com"
 # modeller
 export KEY_MODELLER="MODELIRANJE"
 
-#ranger
+# ranger
 export RANGER_START="/home/saul/Desktop"
+
+# default window manager
+export WM="i3"
