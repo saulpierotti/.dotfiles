@@ -6576,3 +6576,35 @@
 17:35:05.647200 version@stat F·[2 1] S·117KiB[550B 116KiB] Sc·[0.50 0.00]
 17:35:05.656529 db@janitor F·5 G·0
 17:35:05.656647 db@open done T·15.65584ms
+18:40:17.394607 db@close closing
+18:40:17.394912 db@close done T·299.971µs
+=============== Apr 20, 2020 (CEST) ===============
+18:40:19.448263 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+18:40:19.448766 version@stat F·[2 1] S·117KiB[550B 116KiB] Sc·[0.50 0.00]
+18:40:19.448808 db@open opening
+18:40:19.448944 journal@recovery F·1
+18:40:19.449769 journal@recovery recovering @1873
+18:40:19.455585 memdb@flush created L0@1875 N·71 S·1KiB "\x00\x00\x00..txt,v3662404":"\t\x00\x00\x00\x03,v3662406"
+18:40:19.457376 version@stat F·[3 1] S·118KiB[1KiB 116KiB] Sc·[0.75 0.00]
+18:40:19.468438 db@janitor F·6 G·0
+18:40:19.468512 db@open done T·19.684877ms
+18:40:27.141421 db@close closing
+18:40:27.141712 db@close done T·286.478µs
+=============== Apr 20, 2020 (CEST) ===============
+18:40:29.605491 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+18:40:29.605632 version@stat F·[3 1] S·118KiB[1KiB 116KiB] Sc·[0.75 0.00]
+18:40:29.605651 db@open opening
+18:40:29.605700 journal@recovery F·1
+18:40:29.606306 journal@recovery recovering @1876
+18:40:29.612271 memdb@flush created L0@1878 N·1 S·150B "\x04ra..can,v3662472":"\x04ra..can,v3662472"
+18:40:29.613623 version@stat F·[4 1] S·119KiB[2KiB 116KiB] Sc·[1.00 0.00]
+18:40:29.623866 db@janitor F·7 G·0
+18:40:29.623941 db@open done T·18.273686ms
+18:40:29.624137 table@compaction L0·4 -> L1·1 S·119KiB Q·3662473
+18:40:29.631363 table@build created L1@1881 N·1518 S·116KiB "\x00\x00\x00..ova,v3657902":"\r\xd8e..\x12\x04\xc3,v3657901"
+18:40:29.631392 version@stat F·[0 1] S·116KiB[0B 116KiB] Sc·[0.00 0.00]
+18:40:29.634536 table@compaction committed F-4 S-2KiB Ke·0 D·87 T·10.330281ms
+18:40:29.634656 table@remove removed @1875
+18:40:29.634743 table@remove removed @1872
+18:40:29.634795 table@remove removed @1869
+18:40:29.634900 table@remove removed @1868
