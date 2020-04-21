@@ -1,7 +1,11 @@
 # avoid nested ranger instances
 ranger() {
     if [ -z "$RANGER_LEVEL" ]; then
-        /usr/bin/ranger $RANGER_START "$@"
+	if [ "$@" != '' ]; then
+		/usr/bin/ranger "$@"
+	else
+		/usr/bin/ranger "$RANGER_START"
+	fi
     else
         exit
     fi
