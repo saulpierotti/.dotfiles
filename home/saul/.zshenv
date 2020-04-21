@@ -31,6 +31,3 @@ export KEY_MODELLER="MODELIRANJE"
 
 # ranger
 export RANGER_START="/home/saul/Desktop"
-
-# default window manager
-export WM="i3"

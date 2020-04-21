@@ -75,3 +75,6 @@ nvim .xinitrc
 q
 q
 exit
+gnome-tweaks
+q
+q
