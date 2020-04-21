@@ -6797,3 +6797,24 @@
 10:26:40.018487 version@stat F·[3] S·117KiB[117KiB] Sc·[0.75]
 10:26:40.022444 db@janitor F·7 G·0
 10:26:40.022479 db@open done T·7.426965ms
+11:14:48.126792 db@close closing
+11:14:48.126886 db@close done T·93.15µs
+=============== Apr 21, 2020 (CEST) ===============
+11:14:55.475753 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:14:55.475895 version@stat F·[3] S·117KiB[117KiB] Sc·[0.75]
+11:14:55.475918 db@open opening
+11:14:55.475969 journal@recovery F·1
+11:14:55.476439 journal@recovery recovering @1927
+11:14:55.478625 memdb@flush created L0@1928 N·51 S·916B "\x0352..een,v3663341":"\x04ra..can,v3663291"
+11:14:55.478979 version@stat F·[4] S·118KiB[118KiB] Sc·[1.00]
+11:14:55.485870 db@janitor F·8 G·2
+11:14:55.485885 db@janitor removing manifest-1925
+11:14:55.485913 db@janitor removing manifest-1927
+11:14:55.485945 db@open done T·10.018562ms
+11:14:55.486020 table@compaction L0·4 -> L1·0 S·118KiB Q·3663342
+11:14:55.489159 table@build created L1@1931 N·1518 S·116KiB "\x00\x00\x00..ova,v3657902":"\r\xd8e..\x12\x04\xc3,v3657901"
+11:14:55.489186 version@stat F·[0 1] S·116KiB[0B 116KiB] Sc·[0.00 0.00]
+11:14:55.492392 table@compaction committed F-3 S-1KiB Ke·0 D·85 T·6.350366ms
+11:14:55.492462 table@remove removed @1923
+11:14:55.492515 table@remove removed @1920
+11:14:55.492898 table@remove removed @1919

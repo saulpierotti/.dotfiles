@@ -7,6 +7,10 @@ ranger() {
     fi
 }
 
+# theme dark
+export GTK2_RC_FILES="/usr/share/themes/Adwaita-dark"
+export GTK_THEME="Adwaita:dark"
+
 # set default terminal
 export TERMCMD="i3-sensible-terminal"
 
