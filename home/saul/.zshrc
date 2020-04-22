@@ -2,7 +2,7 @@
 source /usr/share/zsh/share/antigen.zsh
 
 # Load the oh-my-zsh's library.
-#antigen use oh-my-zsh
+antigen use oh-my-zsh
 
 # plugins
 antigen bundle sindresorhus/pure
