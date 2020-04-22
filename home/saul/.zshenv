@@ -11,9 +11,10 @@ ranger() {
     fi
 }
 
-# theme dark
-export GTK2_RC_FILES="/usr/share/themes/Adwaita-dark"
-export GTK_THEME="Adwaita:dark"
+# theme dark, breakes firefox
+# set theme with gnome-tweaks, not here
+#export GTK2_RC_FILES="/usr/share/themes/Adapta-Nokto"
+#export GTK_THEME="Adapta-Nokto"
 
 # set default terminal
 export TERMCMD="i3-sensible-terminal"

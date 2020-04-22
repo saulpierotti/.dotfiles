@@ -78,3 +78,4 @@ exit
 gnome-tweaks
 q
 q
+gnome-tweaks

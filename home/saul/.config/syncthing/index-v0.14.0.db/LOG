@@ -6821,3 +6821,26 @@
 =============== Apr 22, 2020 (CEST) ===============
 06:31:13.080577 db@close closing
 06:31:13.081728 db@close done T·1.146994ms
+=============== Apr 22, 2020 (CEST) ===============
+08:31:54.362780 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+08:31:54.363504 version@stat F·[0 1] S·116KiB[0B 116KiB] Sc·[0.00 0.00]
+08:31:54.363534 db@open opening
+08:31:54.363627 journal@recovery F·1
+08:31:54.364385 journal@recovery recovering @1929
+08:31:54.387657 memdb@flush created L0@1932 N·574 S·8KiB "\x00\x00\x00..ova,v3663853":"\t\x00\x00\x00\x03,v3663855"
+08:31:54.388356 version@stat F·[1 1] S·125KiB[8KiB 116KiB] Sc·[0.25 0.00]
+08:31:54.397962 db@janitor F·5 G·1
+08:31:54.397982 db@janitor removing table-1928
+08:31:54.398041 db@open done T·34.49329ms
+08:32:54.401627 memdb@flush N·1 S·43B
+08:32:54.407422 memdb@flush created L0@1936 N·1 S·150B "\x04ra..can,v3663918":"\x04ra..can,v3663918"
+08:32:54.407477 version@stat F·[2 1] S·125KiB[8KiB 116KiB] Sc·[0.50 0.00]
+08:32:54.411528 memdb@flush committed F·1 T·9.846953ms
+08:32:54.411653 journal@remove removed @1933
+08:32:54.411691 table@compaction range L-1 "":""
+08:32:54.411740 table@compaction L0·2 -> L1·1 S·125KiB Q·3663918
+08:32:54.417974 table@build created L1@1937 N·1519 S·116KiB "\x00\x00\x00..ova,v3657902":"\r\xd8e..\x12\x04\xc3,v3657901"
+08:32:54.418030 version@stat F·[0 1] S·116KiB[0B 116KiB] Sc·[0.00 0.00]
+08:32:54.422373 table@compaction committed F-2 S-8KiB Ke·0 D·574 T·10.594246ms
+08:32:54.422653 table@remove removed @1936
+08:32:54.422870 table@remove removed @1931
