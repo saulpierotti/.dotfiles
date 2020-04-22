@@ -12,6 +12,9 @@ set mouse=a
 " set cwd to the one open
 set autochdir
 
+" don't wrap long lines
+set nowrap
+
 " all plugins here, managed by vim-plugged
 call plug#begin('~/.vim/plugged')
 
