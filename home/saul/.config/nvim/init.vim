@@ -13,7 +13,7 @@ set mouse=a
 set autochdir
 
 " don't wrap long lines
-set nowrap
+"set nowrap
 
 " all plugins here, managed by vim-plugged
 call plug#begin('~/.vim/plugged')
