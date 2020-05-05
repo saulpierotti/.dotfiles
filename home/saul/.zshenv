@@ -40,3 +40,8 @@ export KEY_MODELLER="MODELIRANJE"
 
 # ranger
 export RANGER_START="/home/saul/Desktop"
+
+# for rasmol (because needed by cbflib)
+LD_LIBRARY_PATH=/home/saul/CBFlib_7Nov18/CBFlib_4Dec18/cbflib/solib:;export LD_LIBRARY_PATH;
+HDF5_PLUGIN_PATH=/home/saul/CBFlib_7Nov18/CBFlib_4Dec18/cbflib/solib:
+export HDF5_PLUGIN_PATH
