@@ -1,0 +1,6 @@
+text/plain; $EDITOR %s ;
+text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput;
+image/*; openfile %s ;
+video/*; setsid mpv --quiet %s &; copiousoutput;
+application/pdf; openfile %s ;
+application/pgp-encrypted; gpg -d '%s'; copiousoutput;

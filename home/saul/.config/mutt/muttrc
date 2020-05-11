@@ -7,8 +7,6 @@ macro index,pager i3 '<sync-mailbox><enter-command>source /home/saul/.config/mut
 macro index,pager,attach a  "<pipe-message>sed -e /^From/d -e s/To:/From:/ | abook --add-email<return>" "add the to: address to abook?"
 
 # manual edit
-set mailcap_path = ~/.mailcap
+set mailcap_path = ~/.config/mutt/mailcap
 set sidebar_visible = no
-bind index,pager V  noop        ## Unbinds V from version
-macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
 auto_view text/html
