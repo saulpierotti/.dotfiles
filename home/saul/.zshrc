@@ -18,11 +18,6 @@ antigen apply
 # conda configs -----------------------------------------------------
 source /home/saul/.condainit
 
-# load startup file---------------------------------------------------
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec /home/saul/.scripts/startup.py
-fi
-
 # Manual configs------------------------------------------------------------------------------------
 
 # Load my aliases
