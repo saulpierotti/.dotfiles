@@ -18,6 +18,7 @@ set autochdir
 " all plugins here, managed by vim-plugged
 call plug#begin('~/.vim/plugged')
 
+Plug 'jalvesaq/Nvim-R'
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'thinca/vim-quickrun'			"allows execution of code in a separate window
