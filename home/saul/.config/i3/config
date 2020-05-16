@@ -101,7 +101,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # default workspaces
-set $ws1 "1: Curr"
+set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3: www"
 set $ws4 "4"
@@ -140,7 +140,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="firefox"] $ws3
 assign [title="neomutt"] $ws9
 assign [class="Timeshift-gtk"] $ws10
-
+assign [class="Timeshift-gtk"] $ws10
+assign [class="Back In Time"] $ws10
+assign [class="Grsync"] $ws10
 
 # toggle workspace focus
 bindsym $mod+b workspace back_and_forth
@@ -218,11 +220,15 @@ bindsym $mod+p exec xpad
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+m exec i3-sensible-terminal -T neomutt -e neomutt
 
+# poweroff
+bindsym XF86PowerOff exec --no-startup-id ~/.scripts/poweroff.sh
+
 # Restore GNOME's settings
 exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 
 # Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
+
 # edited by saul
 focus_follows_mouse yes
 popup_during_fullscreen smart
