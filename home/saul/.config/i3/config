@@ -101,16 +101,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # default workspaces
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3: www"
+set $ws1 "1: Now"
+set $ws2 "2: Term"
+set $ws3 "3: Web"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "9"
-set $ws9 "9: mail"
-set $ws10 "10: bck"
+set $ws9 "9: Mail"
+set $ws10 "10: Bck"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -137,12 +137,14 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # force a window on a named workspace
+assign [class="Terminator"] $ws2
 assign [class="firefox"] $ws3
 assign [title="neomutt"] $ws9
 assign [class="Timeshift-gtk"] $ws10
 assign [class="Timeshift-gtk"] $ws10
 assign [class="Back In Time"] $ws10
 assign [class="Grsync"] $ws10
+assign [class="Google-chrome"] $ws1
 
 # toggle workspace focus
 bindsym $mod+b workspace back_and_forth
@@ -220,6 +222,7 @@ bindsym $mod+p exec xpad
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+i exec firefox --private-window
 bindsym $mod+Shift+m exec i3-sensible-terminal -T neomutt -e neomutt
+bindsym $mod+Shift+g exec google-chrome-stable
 
 # poweroff
 bindsym XF86PowerOff exec --no-startup-id ~/.scripts/poweroff.sh
