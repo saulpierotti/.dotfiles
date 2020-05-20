@@ -1650,3 +1650,723 @@ INFO: 2020-05-20 11:00:06,668: save_locally() 'Origin URL: https://www.bing.com/
 INFO: 2020-05-20 11:00:06,668: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.BaliRiceHarvest_EN-US2268300291_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
 INFO: 2020-05-20 11:00:06,668: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.BaliRiceHarvest_EN-US2268300291_1920x1080.jpg'
 INFO: 2020-05-20 11:00:06,669: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:03:07,671: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:03:07,671: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:03:07,671: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:03:07,671: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:03:07,671: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:03:07,672: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:03:07,672: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:03:07,672: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:03:07,672: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:03:08,112: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:03:09,114: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:03:09,115: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:03:09,115: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:03:09,115: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:03:09,116: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:03:09,116: download_one() 'Bing: Queue size: 1'
+INFO: 2020-05-20 11:03:09,116: download_one() 'Bing: Queue populated with 1 URLs'
+INFO: 2020-05-20 11:03:09,116: save_locally() 'Origin URL: https://www.bing.com/search?q=Beekeeping&form=hpcapt&filters=HpDate%3a%2220200520_0700%22'
+INFO: 2020-05-20 11:03:09,117: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.LavenderBee_EN-US2922501458_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:03:09,117: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.LavenderBee_EN-US2922501458_1920x1080.jpg'
+INFO: 2020-05-20 11:03:09,117: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:06:10,120: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:06:10,120: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:06:10,120: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:06:10,121: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:06:10,121: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:06:10,121: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:06:10,121: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:06:10,121: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:06:10,121: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:06:10,582: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:06:11,583: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:06:11,584: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:06:11,584: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:06:11,584: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:06:11,584: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:06:11,584: download_one() 'Bing: Queue size: 0'
+INFO: 2020-05-20 11:06:11,585: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:06:11,585: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:06:11,585: download_one() 'Bing: Filling queue'
+INFO: 2020-05-20 11:06:11,993: download_one() 'Bing: Queue populated with 5 URLs'
+INFO: 2020-05-20 11:06:11,993: save_locally() 'Origin URL: https://www.bing.com/search?q=moose&form=hpcapt&filters=HpDate%3a%2220200513_0700%22'
+INFO: 2020-05-20 11:06:11,993: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.MooseWatching_EN-US2214823502_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:06:11,994: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.MooseWatching_EN-US2214823502_1920x1080.jpg'
+INFO: 2020-05-20 11:06:11,994: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:09:12,996: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:09:12,996: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:09:12,996: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:09:12,996: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:09:12,997: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:09:12,997: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:09:12,997: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:09:12,998: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:09:12,998: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:09:13,479: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:09:14,482: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:09:14,482: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:09:14,482: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:09:14,483: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:09:14,483: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:09:14,483: download_one() 'Bing: Queue size: 4'
+INFO: 2020-05-20 11:09:14,483: download_one() 'Bing: Queue populated with 4 URLs'
+INFO: 2020-05-20 11:09:14,484: save_locally() 'Origin URL: https://www.bing.com/search?q=mount+agung&form=hpcapt&filters=HpDate%3a%2220200514_0700%22'
+INFO: 2020-05-20 11:09:14,484: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.BaliRiceHarvest_EN-US2268300291_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:09:14,485: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.BaliRiceHarvest_EN-US2268300291_1920x1080.jpg'
+INFO: 2020-05-20 11:09:14,485: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:12:15,487: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:12:15,487: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:12:15,487: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:12:15,487: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:12:15,488: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:12:15,488: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:12:15,488: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:12:15,488: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:12:15,488: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:12:16,351: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:12:17,354: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:12:17,354: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:12:17,354: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:12:17,354: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:12:17,354: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:12:17,354: download_one() 'Bing: Queue size: 3'
+INFO: 2020-05-20 11:12:17,354: download_one() 'Bing: Queue populated with 3 URLs'
+INFO: 2020-05-20 11:12:17,355: save_locally() 'Origin URL: https://www.bing.com/search?q=henningsvaer&form=hpcapt&filters=HpDate%3a%2220200517_0700%22'
+INFO: 2020-05-20 11:12:17,355: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.LofotenIslands_EN-US2533248925_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:12:17,355: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.LofotenIslands_EN-US2533248925_1920x1080.jpg'
+INFO: 2020-05-20 11:12:17,355: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:15:18,357: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:15:18,357: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:15:18,357: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:15:18,358: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:15:18,358: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:15:18,358: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:15:18,358: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:15:18,358: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:15:18,358: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:15:18,829: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:15:19,831: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:15:19,831: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:15:19,832: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:15:19,832: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:15:19,832: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:15:19,832: download_one() 'Bing: Queue size: 2'
+INFO: 2020-05-20 11:15:19,833: download_one() 'Bing: Queue populated with 2 URLs'
+INFO: 2020-05-20 11:15:19,833: save_locally() 'Origin URL: https://www.bing.com/search?q=roaring+fork+great+smoky+mountains&form=hpcapt&filters=HpDate%3a%2220200519_0700%22'
+INFO: 2020-05-20 11:15:19,833: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.RoaringFork_EN-US2762183808_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:15:19,833: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.RoaringFork_EN-US2762183808_1920x1080.jpg'
+INFO: 2020-05-20 11:15:19,833: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:18:20,836: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:18:20,836: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:18:20,836: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:18:20,836: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:18:20,837: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:18:20,837: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:18:20,837: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:18:20,837: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:18:20,837: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:18:21,362: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:18:22,366: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:18:22,367: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:18:22,367: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:18:22,367: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:18:22,367: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:18:22,367: download_one() 'Bing: Queue size: 1'
+INFO: 2020-05-20 11:18:22,368: download_one() 'Bing: Queue populated with 1 URLs'
+INFO: 2020-05-20 11:18:22,368: save_locally() 'Origin URL: https://www.bing.com/search?q=Beekeeping&form=hpcapt&filters=HpDate%3a%2220200520_0700%22'
+INFO: 2020-05-20 11:18:22,368: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.LavenderBee_EN-US2922501458_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:18:22,368: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.LavenderBee_EN-US2922501458_1920x1080.jpg'
+INFO: 2020-05-20 11:18:22,368: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:21:23,371: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:21:23,371: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:21:23,371: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:21:23,372: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:21:23,372: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:21:23,372: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:21:23,372: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:21:23,372: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:21:23,373: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:21:26,706: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:21:27,710: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:21:27,710: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:21:27,710: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:21:27,711: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:21:27,711: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:21:27,711: download_one() 'Bing: Queue size: 0'
+INFO: 2020-05-20 11:21:27,711: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:21:27,711: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:21:27,711: download_one() 'Bing: Filling queue'
+INFO: 2020-05-20 11:21:31,643: download_one() 'Bing: Queue populated with 5 URLs'
+INFO: 2020-05-20 11:21:31,644: save_locally() 'Origin URL: https://www.bing.com/search?q=henningsvaer&form=hpcapt&filters=HpDate%3a%2220200517_0700%22'
+INFO: 2020-05-20 11:21:31,644: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.LofotenIslands_EN-US2533248925_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:21:31,644: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.LofotenIslands_EN-US2533248925_1920x1080.jpg'
+INFO: 2020-05-20 11:21:31,644: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:24:32,646: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:24:32,646: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:24:32,646: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:24:32,646: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:24:32,646: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:24:32,646: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:24:32,646: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:24:32,646: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:24:32,646: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:24:34,924: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:24:35,927: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:24:35,928: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:24:35,928: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:24:35,928: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:24:35,928: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:24:35,928: download_one() 'Bing: Queue size: 4'
+INFO: 2020-05-20 11:24:35,928: download_one() 'Bing: Queue populated with 4 URLs'
+INFO: 2020-05-20 11:24:35,928: save_locally() 'Origin URL: https://www.bing.com/search?q=Beekeeping&form=hpcapt&filters=HpDate%3a%2220200520_0700%22'
+INFO: 2020-05-20 11:24:35,928: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.LavenderBee_EN-US2922501458_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:24:35,928: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.LavenderBee_EN-US2922501458_1920x1080.jpg'
+INFO: 2020-05-20 11:24:35,928: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:27:36,930: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:27:36,930: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:27:36,930: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:27:36,930: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:27:36,930: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:27:36,930: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:27:36,930: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:27:36,930: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:27:36,930: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:27:40,087: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:27:41,091: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:27:41,091: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:27:41,091: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:27:41,091: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:27:41,091: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:27:41,091: download_one() 'Bing: Queue size: 3'
+INFO: 2020-05-20 11:27:41,091: download_one() 'Bing: Queue populated with 3 URLs'
+INFO: 2020-05-20 11:27:41,091: save_locally() 'Origin URL: https://www.bing.com/search?q=roaring+fork+great+smoky+mountains&form=hpcapt&filters=HpDate%3a%2220200519_0700%22'
+INFO: 2020-05-20 11:27:41,091: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.RoaringFork_EN-US2762183808_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:27:41,092: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.RoaringFork_EN-US2762183808_1920x1080.jpg'
+INFO: 2020-05-20 11:27:41,092: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:30:42,093: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:30:42,094: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:30:42,094: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:30:42,094: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:30:42,094: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:30:42,094: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:30:42,094: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:30:42,094: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:30:42,095: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:30:48,240: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:30:49,244: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:30:49,244: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:30:49,244: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:30:49,245: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:30:49,245: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:30:49,245: download_one() 'Bing: Queue size: 2'
+INFO: 2020-05-20 11:30:49,245: download_one() 'Bing: Queue populated with 2 URLs'
+INFO: 2020-05-20 11:30:49,245: save_locally() 'Origin URL: https://www.bing.com/search?q=mount+agung&form=hpcapt&filters=HpDate%3a%2220200514_0700%22'
+INFO: 2020-05-20 11:30:49,246: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.BaliRiceHarvest_EN-US2268300291_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:30:49,246: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.BaliRiceHarvest_EN-US2268300291_1920x1080.jpg'
+INFO: 2020-05-20 11:30:49,246: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:33:50,248: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:33:50,248: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:33:50,248: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:33:50,249: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:33:50,249: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:33:50,249: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:33:50,249: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:33:50,249: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:33:50,249: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:33:56,670: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:33:57,672: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:33:57,673: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:33:57,673: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:33:57,673: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:33:57,674: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:33:57,674: download_one() 'Bing: Queue size: 1'
+INFO: 2020-05-20 11:33:57,674: download_one() 'Bing: Queue populated with 1 URLs'
+INFO: 2020-05-20 11:33:57,674: save_locally() 'Origin URL: https://www.bing.com/search?q=moose&form=hpcapt&filters=HpDate%3a%2220200513_0700%22'
+INFO: 2020-05-20 11:33:57,675: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.MooseWatching_EN-US2214823502_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:33:57,675: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.MooseWatching_EN-US2214823502_1920x1080.jpg'
+INFO: 2020-05-20 11:33:57,675: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:36:58,677: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:36:58,678: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:36:58,678: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:36:58,678: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:36:58,678: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:36:58,678: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:36:58,679: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:36:58,679: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:36:58,679: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:37:02,637: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:37:03,642: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:37:03,642: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:37:03,643: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:37:03,643: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:37:03,643: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:37:03,643: download_one() 'Bing: Queue size: 0'
+INFO: 2020-05-20 11:37:03,643: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:37:03,643: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:37:03,643: download_one() 'Bing: Filling queue'
+INFO: 2020-05-20 11:37:08,941: download_one() 'Bing: Queue populated with 5 URLs'
+INFO: 2020-05-20 11:37:08,941: save_locally() 'Origin URL: https://www.bing.com/search?q=henningsvaer&form=hpcapt&filters=HpDate%3a%2220200517_0700%22'
+INFO: 2020-05-20 11:37:08,941: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.LofotenIslands_EN-US2533248925_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:37:08,941: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.LofotenIslands_EN-US2533248925_1920x1080.jpg'
+INFO: 2020-05-20 11:37:08,942: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:40:09,944: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:40:09,944: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:40:09,944: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:40:09,944: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:40:09,944: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:40:09,944: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:40:09,944: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:40:09,944: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:40:09,944: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:40:15,018: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fabac988c40>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fabac988c40>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fabac988c40>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+INFO: 2020-05-20 11:40:16,020: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:40:16,021: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:40:16,021: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:40:16,021: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:40:16,021: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:40:16,022: download_one() 'Bing: Queue size: 4'
+INFO: 2020-05-20 11:40:16,022: download_one() 'Bing: Queue populated with 4 URLs'
+INFO: 2020-05-20 11:40:16,022: save_locally() 'Origin URL: https://www.bing.com/search?q=moose&form=hpcapt&filters=HpDate%3a%2220200513_0700%22'
+INFO: 2020-05-20 11:40:16,023: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.MooseWatching_EN-US2214823502_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:40:16,023: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.MooseWatching_EN-US2214823502_1920x1080.jpg'
+INFO: 2020-05-20 11:40:16,023: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:43:17,025: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:43:17,026: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:43:17,026: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:43:17,026: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:43:17,026: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:43:17,026: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:43:17,026: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:43:17,026: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:43:17,026: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:43:17,518: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:43:18,520: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:43:18,520: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:43:18,521: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:43:18,521: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:43:18,521: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:43:18,521: download_one() 'Bing: Queue size: 3'
+INFO: 2020-05-20 11:43:18,522: download_one() 'Bing: Queue populated with 3 URLs'
+INFO: 2020-05-20 11:43:18,522: save_locally() 'Origin URL: https://www.bing.com/search?q=mount+agung&form=hpcapt&filters=HpDate%3a%2220200514_0700%22'
+INFO: 2020-05-20 11:43:18,522: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.BaliRiceHarvest_EN-US2268300291_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:43:18,522: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.BaliRiceHarvest_EN-US2268300291_1920x1080.jpg'
+INFO: 2020-05-20 11:43:18,522: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:46:19,525: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:46:19,525: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:46:19,526: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:46:19,526: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:46:19,526: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:46:19,526: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:46:19,526: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:46:19,526: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:46:19,527: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:46:20,143: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:46:21,145: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:46:21,145: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:46:21,146: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:46:21,146: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:46:21,146: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:46:21,146: download_one() 'Bing: Queue size: 2'
+INFO: 2020-05-20 11:46:21,147: download_one() 'Bing: Queue populated with 2 URLs'
+INFO: 2020-05-20 11:46:21,147: save_locally() 'Origin URL: https://www.bing.com/search?q=Beekeeping&form=hpcapt&filters=HpDate%3a%2220200520_0700%22'
+INFO: 2020-05-20 11:46:21,147: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.LavenderBee_EN-US2922501458_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:46:21,147: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.LavenderBee_EN-US2922501458_1920x1080.jpg'
+INFO: 2020-05-20 11:46:21,147: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:49:22,150: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:49:22,150: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:49:22,150: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:49:22,150: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:49:22,150: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:49:22,151: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:49:22,151: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:49:22,151: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:49:22,151: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:49:27,294: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:49:28,297: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:49:28,298: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:49:28,298: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:49:28,298: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:49:28,298: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:49:28,298: download_one() 'Bing: Queue size: 1'
+INFO: 2020-05-20 11:49:28,298: download_one() 'Bing: Queue populated with 1 URLs'
+INFO: 2020-05-20 11:49:28,298: save_locally() 'Origin URL: https://www.bing.com/search?q=roaring+fork+great+smoky+mountains&form=hpcapt&filters=HpDate%3a%2220200519_0700%22'
+INFO: 2020-05-20 11:49:28,298: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.RoaringFork_EN-US2762183808_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:49:28,298: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.RoaringFork_EN-US2762183808_1920x1080.jpg'
+INFO: 2020-05-20 11:49:28,298: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:52:29,300: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:52:29,300: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:52:29,300: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:52:29,300: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:52:29,300: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:52:29,300: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:52:29,300: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:52:29,300: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:52:29,300: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:52:29,761: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:52:30,764: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:52:30,764: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:52:30,764: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:52:30,764: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:52:30,765: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:52:30,765: download_one() 'Bing: Queue size: 0'
+INFO: 2020-05-20 11:52:30,765: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:52:30,765: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:52:30,765: download_one() 'Bing: Filling queue'
+INFO: 2020-05-20 11:52:31,545: download_one() 'Bing: Queue populated with 5 URLs'
+INFO: 2020-05-20 11:52:31,546: save_locally() 'Origin URL: https://www.bing.com/search?q=Beekeeping&form=hpcapt&filters=HpDate%3a%2220200520_0700%22'
+INFO: 2020-05-20 11:52:31,546: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.LavenderBee_EN-US2922501458_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:52:31,547: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.LavenderBee_EN-US2922501458_1920x1080.jpg'
+INFO: 2020-05-20 11:52:31,547: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:55:32,549: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:55:32,549: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:55:32,550: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:55:32,550: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:55:32,550: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:55:32,550: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:55:32,550: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:55:32,550: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:55:32,550: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:55:33,048: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:55:34,051: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:55:34,052: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:55:34,052: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:55:34,052: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:55:34,052: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:55:34,052: download_one() 'Bing: Queue size: 4'
+INFO: 2020-05-20 11:55:34,052: download_one() 'Bing: Queue populated with 4 URLs'
+INFO: 2020-05-20 11:55:34,053: save_locally() 'Origin URL: https://www.bing.com/search?q=henningsvaer&form=hpcapt&filters=HpDate%3a%2220200517_0700%22'
+INFO: 2020-05-20 11:55:34,053: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.LofotenIslands_EN-US2533248925_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:55:34,053: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.LofotenIslands_EN-US2533248925_1920x1080.jpg'
+INFO: 2020-05-20 11:55:34,053: save_locally() 'File already exists, skip downloading'
+INFO: 2020-05-20 11:58:35,055: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:58:35,055: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:58:35,056: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:58:35,056: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:58:35,056: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-05-20 11:58:35,056: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-05-20 11:58:35,056: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-05-20 11:58:35,056: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-05-20 11:58:35,056: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-05-20 11:58:36,628: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-05-20 11:58:37,630: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:58:37,630: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:58:37,630: get_throttling() 'Bing: parsing serverside options'
+INFO: 2020-05-20 11:58:37,630: get_throttling() 'Could not parse Bing serverside options, using defaults None, None'
+INFO: 2020-05-20 11:58:37,630: download_one() 'Bing: Downloading an image, config: None'
+INFO: 2020-05-20 11:58:37,631: download_one() 'Bing: Queue size: 3'
+INFO: 2020-05-20 11:58:37,631: download_one() 'Bing: Queue populated with 3 URLs'
+INFO: 2020-05-20 11:58:37,631: save_locally() 'Origin URL: https://www.bing.com/search?q=roaring+fork+great+smoky+mountains&form=hpcapt&filters=HpDate%3a%2220200519_0700%22'
+INFO: 2020-05-20 11:58:37,631: save_locally() 'Image URL: https://www.bing.com/th?id=OHR.RoaringFork_EN-US2762183808_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp'
+INFO: 2020-05-20 11:58:37,631: save_locally() 'Local path: /home/saul/Pictures/wallpaper/Downloaded by Variety/Bing/OHR.RoaringFork_EN-US2762183808_1920x1080.jpg'
+INFO: 2020-05-20 11:58:37,631: save_locally() 'File already exists, skip downloading'
