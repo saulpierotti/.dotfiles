@@ -39,7 +39,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal -T Terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -137,7 +137,6 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # force a window on a named workspace
-assign [class="Terminator"] $ws2
 assign [class="firefox"] $ws3
 assign [title="neomutt"] $ws9
 assign [class="Timeshift-gtk"] $ws10
@@ -145,6 +144,7 @@ assign [class="Timeshift-gtk"] $ws10
 assign [class="Back In Time"] $ws10
 assign [class="Grsync"] $ws10
 assign [class="Google-chrome"] $ws1
+assign [title="Terminal"] $ws2
 
 # toggle workspace focus
 bindsym $mod+b workspace back_and_forth
@@ -215,7 +215,7 @@ bindsym XF86AudioMute exec python3 ~/.scripts/volumectl.py mute
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
-# rotate screen
+# other binds
 bindsym $mod+Shift+n exec bash ~/.scripts/screenmode.sh
 bindsym Print exec gnome-screenshot -a -i
 bindsym $mod+p exec xpad
