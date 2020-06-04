@@ -26210,3 +26210,459 @@ Traceback (most recent call last):
   File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
     raise HTTPError(http_error_msg, response=self)
 requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:03:58,049: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:03:58,049: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:03:58,049: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:03:58,049: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:03:58,049: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:03:58,049: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:03:58,050: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:03:58,050: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:03:58,050: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:03:58,689: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:06:59,694: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:06:59,694: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:06:59,694: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:06:59,694: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:06:59,694: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:06:59,695: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:06:59,695: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:06:59,695: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:06:59,695: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:07:00,331: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:10:01,335: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:10:01,335: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:10:01,335: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:10:01,336: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:10:01,336: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:10:01,336: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:10:01,336: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:10:01,336: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:10:01,336: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:10:01,943: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:13:02,945: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:13:02,946: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:13:02,946: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:13:02,946: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:13:02,946: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:13:02,946: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:13:02,946: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:13:02,947: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:13:02,947: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:13:03,622: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:16:04,626: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:16:04,626: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:16:04,626: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:16:04,626: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:16:04,627: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:16:04,627: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:16:04,627: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:16:04,627: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:16:04,627: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:16:10,747: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:19:11,750: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:19:11,751: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:19:11,751: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:19:11,751: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:19:11,751: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:19:11,751: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:19:11,751: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:19:11,751: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:19:11,751: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:19:12,896: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:22:13,900: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:22:13,901: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:22:13,901: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:22:13,901: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:22:13,902: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:22:13,902: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:22:13,902: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:22:13,902: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:22:13,902: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:22:14,534: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:25:15,537: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:25:15,537: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:25:15,537: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:25:15,537: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:25:15,537: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:25:15,537: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:25:15,538: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:25:15,538: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:25:15,538: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:25:16,174: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:28:17,178: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:28:17,178: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:28:17,178: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:28:17,178: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:28:17,179: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:28:17,179: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:28:17,179: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:28:17,179: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:28:17,179: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:28:18,925: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:31:19,929: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:31:19,930: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:31:19,930: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:31:19,930: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:31:19,930: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:31:19,930: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:31:19,930: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:31:19,930: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:31:19,930: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:31:20,556: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:34:21,560: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:34:21,560: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:34:21,561: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:34:21,561: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:34:21,561: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:34:21,561: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:34:21,561: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:34:21,561: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:34:21,561: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:34:22,221: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:37:23,225: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:37:23,226: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:37:23,226: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:37:23,226: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:37:23,226: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:37:23,227: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:37:23,227: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:37:23,227: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:37:23,227: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:37:23,870: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:40:24,874: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:40:24,874: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:40:24,874: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:40:24,874: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:40:24,874: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:40:24,874: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:40:24,875: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:40:24,875: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:40:24,875: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:40:25,497: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:43:26,499: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:43:26,500: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:43:26,500: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:43:26,500: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:43:26,501: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:43:26,501: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:43:26,501: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:43:26,501: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:43:26,501: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:43:27,014: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:46:28,017: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:46:28,017: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:46:28,017: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:46:28,018: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:46:28,018: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:46:28,018: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:46:28,018: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:46:28,019: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:46:28,019: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:46:28,477: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:49:29,481: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:49:29,481: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:49:29,481: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:49:29,481: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:49:29,482: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:49:29,482: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:49:29,482: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:49:29,482: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:49:29,482: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:49:30,134: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:52:31,136: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:52:31,137: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:52:31,137: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:52:31,137: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:52:31,137: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:52:31,137: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:52:31,138: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:52:31,138: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:52:31,138: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:52:31,692: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:55:32,696: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:55:32,696: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:55:32,696: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:55:32,697: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:55:32,697: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:55:32,697: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:55:32,697: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:55:32,697: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:55:32,697: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:55:34,069: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
+INFO: 2020-06-04 12:58:35,073: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:58:35,074: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:58:35,074: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:58:35,074: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:58:35,074: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-04 12:58:35,074: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-04 12:58:35,074: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-04 12:58:35,074: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-04 12:58:35,074: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-04 12:58:35,837: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 622, in request
+    r.raise_for_status()
+  File "/usr/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://storage.googleapis.com/chromeos-wallpaper-public/manifest_en.json
