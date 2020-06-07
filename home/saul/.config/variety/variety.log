@@ -7755,3 +7755,1142 @@ Traceback (most recent call last):
   File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
     raise ConnectionError(e, request=request)
 requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f9310>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 10:02:46,881: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 10:02:46,881: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 10:02:46,881: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 10:02:46,881: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 10:02:46,882: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 10:02:46,882: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 10:02:46,882: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 10:02:46,882: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 10:02:46,882: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 10:02:56,898: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde283f9730>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f9730>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f9730>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:12:41,234: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:12:41,234: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:12:41,234: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:12:41,234: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:12:41,234: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:12:41,234: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:12:41,234: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:12:41,235: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:12:41,235: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:12:46,243: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde283f9b80>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f9b80>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f9b80>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:15:47,248: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:15:47,248: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:15:47,248: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:15:47,248: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:15:47,248: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:15:47,249: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:15:47,249: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:15:47,249: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:15:47,249: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:15:57,262: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde283f9fa0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f9fa0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f9fa0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:18:58,268: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:18:58,268: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:18:58,268: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:18:58,268: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:18:58,268: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:18:58,269: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:18:58,269: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:18:58,269: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:18:58,269: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:19:08,278: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde2837f400>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde2837f400>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde2837f400>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:22:09,282: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:22:09,282: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:22:09,282: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:22:09,282: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:22:09,283: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:22:09,283: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:22:09,283: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:22:09,283: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:22:09,283: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:22:19,298: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde2837f820>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde2837f820>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde2837f820>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:25:20,303: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:25:20,304: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:25:20,304: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:25:20,304: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:25:20,304: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:25:20,304: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:25:20,304: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:25:20,305: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:25:20,305: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:25:30,324: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde283f9250>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f9250>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f9250>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:28:31,329: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:28:31,329: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:28:31,329: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:28:31,330: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:28:31,330: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:28:31,330: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:28:31,330: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:28:31,330: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:28:31,330: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:28:41,352: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde283f7700>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f7700>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f7700>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:31:42,356: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:31:42,356: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:31:42,357: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:31:42,357: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:31:42,357: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:31:42,357: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:31:42,357: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:31:42,357: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:31:42,357: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:31:52,378: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde283f7a60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f7a60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f7a60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:34:53,382: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:34:53,382: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:34:53,383: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:34:53,383: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:34:53,383: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:34:53,383: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:34:53,383: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:34:53,383: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:34:53,383: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:35:03,389: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde283f76a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f76a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f76a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:38:04,394: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:38:04,394: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:38:04,394: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:38:04,394: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:38:04,394: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:38:04,394: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:38:04,394: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:38:04,394: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:38:04,395: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:38:14,409: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde283f7b80>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f7b80>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde283f7b80>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:41:15,413: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:41:15,413: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:41:15,414: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:41:15,414: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:41:15,414: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:41:15,414: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:41:15,414: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:41:15,414: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:41:15,414: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:41:25,436: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde28539cd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde28539cd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde28539cd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:44:26,441: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:44:26,441: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:44:26,442: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:44:26,442: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:44:26,442: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:44:26,442: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:44:26,442: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:44:26,442: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:44:26,443: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:44:36,458: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde28539eb0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde28539eb0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde28539eb0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:47:37,463: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:47:37,463: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:47:37,464: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:47:37,464: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:47:37,464: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:47:37,464: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:47:37,464: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:47:37,464: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:47:37,464: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:47:47,484: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde285394c0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde285394c0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde285394c0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:50:48,487: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:50:48,487: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:50:48,487: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:50:48,487: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:50:48,488: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:50:48,488: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:50:48,488: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:50:48,488: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:50:48,488: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:50:58,505: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde28509f70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde28509f70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde28509f70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:53:59,508: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:53:59,508: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:53:59,508: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:53:59,508: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:53:59,509: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:53:59,509: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:53:59,509: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:53:59,509: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:53:59,509: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:54:09,523: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde28509f40>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde28509f40>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde28509f40>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 14:57:10,528: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:57:10,528: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:57:10,529: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:57:10,529: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:57:10,529: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 14:57:10,529: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 14:57:10,529: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 14:57:10,529: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 14:57:10,529: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 14:57:20,548: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde2856adc0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde2856adc0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde2856adc0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+INFO: 2020-06-07 15:00:21,552: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 15:00:21,552: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 15:00:21,552: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 15:00:21,552: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 15:00:21,552: download_one() 'Chrome OS Wallpapers: Downloading an image, config: None'
+INFO: 2020-06-07 15:00:21,552: download_one() 'Chrome OS Wallpapers: Queue size: 0'
+INFO: 2020-06-07 15:00:21,552: get_throttling() 'Chrome OS Wallpapers: parsing serverside options'
+INFO: 2020-06-07 15:00:21,552: get_throttling() 'Could not parse Chrome OS Wallpapers serverside options, using defaults None, None'
+INFO: 2020-06-07 15:00:21,552: download_one() 'Chrome OS Wallpapers: Filling queue'
+ERROR: 2020-06-07 15:00:31,565: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fde2856a0d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde2856a0d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/variety/VarietyWindow.py", line 1159, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.8/site-packages/variety/plugins/builtin/downloaders/ChromeOSWallpapersDownloader.py", line 54, in fill_queue
+    manifest = Util.fetch_json(MANIFEST_URL)
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 643, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+  File "/usr/lib/python3.8/site-packages/variety/Util.py", line 612, in request
+    r = requests.request(
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /chromeos-wallpaper-public/manifest_en.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fde2856a0d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
