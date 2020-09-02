@@ -22,7 +22,6 @@ Plug 'jalvesaq/Nvim-R'
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'thinca/vim-quickrun'			"allows execution of code in a separate window
-Plug 'vim-latex/vim-latex'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'			" git wrapper for vim
@@ -32,7 +31,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer'}
 Plug 'w0rp/ale'
 Plug 'SirVer/ultisnips'
-Plug 'lervag/vimtex'
 Plug 'thaerkh/vim-indentguides'
 Plug 'tpope/vim-surround'
 Plug 'tmhedberg/simpylfold'
@@ -43,6 +41,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/goyo.vim'
 Plug 'Raimondi/delimitMate'
+Plug 'lervag/vimtex'
 
 " colorschemes
 Plug 'morhetz/gruvbox'	"color scheme
@@ -168,11 +167,6 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix |
 
-" Configurations for vim-latex
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats='pdf, aux'
-
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 autocmd VimLeave *.tex !texclear.sh %
 
@@ -187,10 +181,11 @@ function! SyncTexForward()
 endfunction
 au FileType tex nmap <Leader>f :call SyncTexForward()<CR>
 
-" zathura backward search nvim
+" vimtex
 let g:vimtex_latexmk_build_dir = './build'
 let g:vimtex_latexmk_progname = 'nvr'
 let g:vimtex_view_method = 'zathura'
+let g:tex_flavor = 'latex'
 
 " for removing search highlight by hitting ESC
 nnoremap <esc> :noh<return><esc>
@@ -237,4 +232,3 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 " delimitMate confs
 au FileType markdown,tex,bib let b:delimitMate_quotes = "\" ' ` $"
 au FileType markdown,tex,bib let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
-
