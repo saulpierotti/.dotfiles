@@ -18,6 +18,9 @@ set autochdir
 " all plugins here, managed by vim-plugged
 call plug#begin('~/.vim/plugged')
 
+Plug 'jalvesaq/Nvim-R'
+Plug 'tmhedberg/SimpylFold'
+"Plug 'vim-scripts/indentpython.vim'
 Plug 'thinca/vim-quickrun'			"allows execution of code in a separate window
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -25,27 +28,20 @@ Plug 'tpope/vim-fugitive'			" git wrapper for vim
 Plug 'plasticboy/vim-markdown'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'SirVer/ultisnips'
-Plug 'thaerkh/vim-indentguides'
-Plug 'tpope/vim-surround'
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer'}
+"Plug 'w0rp/ale'
+"Plug 'SirVer/ultisnips'
+"Plug 'thaerkh/vim-indentguides'
+"Plug 'tpope/vim-surround'
+Plug 'tmhedberg/simpylfold'
+"Plug 'python-mode/python-mode'
+"Plug 'kamykn/spelunker.vim'
+Plug 'psf/black' ", { 'tag': '19.10b0' }
 Plug 'tomtom/tcomment_vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/goyo.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'lervag/vimtex'
-
-" general code completers
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all'}
-Plug 'w0rp/ale' " this controls the linting in python and other languages
-		" it implements black, autopep8, pyflakes and others
-		" see the configuration part
-
-" python stuff
-"Plug 'psf/black', { 'tag': '19.10b0' } " provided by ale
-Plug 'tmhedberg/SimpylFold'
-Plug 'vim-scripts/indentpython.vim'
-Plug 'vim-syntastic/syntastic'
-"Plug 'davidhalter/jedi-vim' " provided by YCM
 
 " colorschemes
 Plug 'morhetz/gruvbox'	"color scheme
@@ -98,6 +94,7 @@ augroup END
 colorscheme gruvbox
 set background=dark
 
+
 " Map F5 key to code execution through quickrun and hsplit
 nnoremap <F5> :QuickRun<CR>
 
@@ -135,7 +132,6 @@ let g:airline_theme="gruvbox"
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-
 " unicode symbols
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
@@ -162,19 +158,14 @@ let g:airline_symbols.linenr = ''
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" python configs
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
+    \ set textwidth=88 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
-    \ set colorcolumn=80
-let g:SimpylFold_docstring_preview=1
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 autocmd VimLeave *.tex !texclear.sh %
@@ -200,7 +191,7 @@ let g:tex_flavor = 'latex'
 nnoremap <esc> :noh<return><esc>
 
 " format with :Black when saving py files
-"autocmd BufWritePre *.py execute ':Black'
+autocmd BufWritePre *.py execute ':Black'
 
 " python linting for pymode
 let g:pymode_options_max_line_length = 88
@@ -238,6 +229,8 @@ nnoremap <silent><A-t> :call TermToggle(12)<CR>
 inoremap <silent><A-t> <Esc>:call TermToggle(12)<CR>
 tnoremap <silent><A-t> <C-\><C-n>:call TermToggle(12)<CR>
 
+" YouCompleteMe confs
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " delimitMate confs
 au FileType markdown,tex,bib let b:delimitMate_quotes = "\" ' ` $"

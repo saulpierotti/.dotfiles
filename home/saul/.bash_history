@@ -79,3 +79,4 @@ gnome-tweaks
 q
 q
 gnome-tweaks
+q
