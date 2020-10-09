@@ -175,6 +175,22 @@ au BufNewFile,BufRead *.py
 let g:SimpylFold_docstring_preview=1
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ale_fixers = {
+  \   'python': [
+  \       'add_blank_lines_for_python_control_statements',
+  \       'autopep8',
+  \       'black',
+  \       'isort',
+  \       'reorder-python-imports',
+  \       'isort',
+  \       'yapf',
+  \       'remove_trailing_lines',
+  \       'trim_whitespace',
+  \   ],
+  \}
+let g:ale_fix_on_save = 1
+let g:ale_python_black_options = '--line-length=79'
+
 
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 autocmd VimLeave *.tex !texclear.sh %
