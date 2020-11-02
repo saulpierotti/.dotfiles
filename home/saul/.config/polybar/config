@@ -17,39 +17,40 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #CA282828
-background-alt = #CA282828
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #aa555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+;gruvbox dark hard semi-transparent
+background = #CA1D2021
+background_alt = #FF1D2021
+;full white
+foreground = #FFFFFF
+;gruvbox blue
+primary = #458588
+;gruvbox blue
+secondary = #B16286
+;gruvbox red semi-transparent
+alert = #CACC2412
 
 [bar/laptop]
 enable-ipc = true
 monitor = ${env:MONITOR:}
 width = 100%
-height = 27
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+radius = 0
 fixed-center = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
-line-color = #f00
+line-size = 5
 
-border-size = 0 
-border-color = #00000000
+;border-size = 2
+;border-color = ${colors.background_alt}
 
-padding-left = 0
+padding-left = 2
 padding-right = 2
 
-module-margin-left = 1
+module-margin-left = 2
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
@@ -61,10 +62,10 @@ font-5 = Font Awesome 5 Brands:pixelsize=10;3
 
 modules-left = i3
 modules-center = xwindow
-modules-right = backlight pulseaudio vpn-nordvpn-status wlan eth temperature date
+modules-right = backlight pulseaudio vpn-nordvpn-status temperature date
 
 tray-position = right
-tray-padding = 2
+tray-padding = 5
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -73,59 +74,11 @@ cursor-scroll = ns-resize
 type = internal/xwindow
 label = %title:0:30:...%
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
-
 [module/vpn-nordvpn-status]
 type = custom/script
 exec = ~/.scripts/vpn-nordvpn-status.sh
 interval = 5
-format-underline = #268bd2
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
-
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
+format-underline = ${colors.primary}
 
 [module/i3]
 type = internal/i3
@@ -136,7 +89,7 @@ type = internal/i3
 ; on different bars
 ;
 ; Default: false
-pin-workspaces = true
+pin-workspaces = false
 
 ; This will split the workspace name on ':'
 ; Default: false
@@ -202,8 +155,8 @@ label-mode-background = #e60053
 ;   %output%
 ; Default: %icon%  %name%
 label-focused = %name%
-label-focused-foreground = #ffffff
-label-focused-underline = #fba922
+label-focused-foreground = ${colors.foreground}
+label-focused-underline = ${colors.secondary}
 label-focused-padding = 1
 
 ; Available tokens:
@@ -214,6 +167,7 @@ label-focused-padding = 1
 ; Default: %icon%  %name%
 label-unfocused = %name%
 label-unfocused-padding = 1
+label-unfocused-underline = ${colors.primary}
 
 ; Available tokens:
 ;   %name%
@@ -222,7 +176,7 @@ label-unfocused-padding = 1
 ;   %output%
 ; Default: %icon%  %name%
 label-visible = %name%
-label-visible-underline = #555555
+label-visible-underline = ${colors.primary}
 label-visible-padding = 1
 
 ; Available tokens:
@@ -231,59 +185,23 @@ label-visible-padding = 1
 ;   %index%
 ;   %output%
 ; Default: %icon%  %name%
-label-urgent = %index%
-label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
+label-urgent = %name%
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
 ; Separator in between workspaces
-; label-separator = |
+label-separator = |
 ; label-separator-padding = 2
-; label-separator-foreground = #ffb52a
+label-separator-foreground = ${colors.foreground}
 
 [module/backlight]
 type = custom/script
-exec = light -G| cut -d "." -f 1|echo BL $(</dev/stdin)%
+exec = light -G| cut -d "." -f 1|echo  $(</dev/stdin)%
 scroll-up = light -A 5
 scroll-down = light -U 5
 interval = 0.1
-format-underline = #268bd2
-
-[module/wlan]
-type = internal/network
-interface = wlp3s0
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #008000
-label-connected = %essid%
-
-format-disconnected = <label-disconnected>
-format-disconnected-underline = #f50a4d
-label-disconnected = WiFi disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
-
-[module/eth]
-type = internal/network
-interface = enp2s0f1
-interval = 3.0
-
-format-connected-underline = #008000
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected = <label-disconnected>
-format-disconnected-underline = #f50a4d
-label-disconnected = ETH disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
+format-underline = ${colors.primary}
 
 [module/date]
 type = internal/date
@@ -317,118 +235,19 @@ format = <label>
 label = %date% %time%
 label-font = 3
 ;label-foreground = #9A32DB
-
-format-underline = #268bd2
+format-underline = ${colors.primary}
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
+label-volume =  %percentage%
+label-volume-foreground = ${colors.foreground}
 
-label-muted = VOL mute
-label-muted-foreground = #666
+label-muted = "   "
+label-muted-foreground = ${colors.foreground}
 
-format-muted-underline = #f50a4d
-format-volume-underline = #008000
-
-[module/battery]
-type = internal/battery
-
-; This is useful in case the battery never reports 100% charge
-; full-at = 99
-
-; Use the following command to list batteries and adapters:
-; $ ls -1 /sys/class/power_supply/
-battery = BAT1
-adapter = ACAD
-
-; If an inotify event haven't been reported in this many
-; seconds, manually poll for new values.
-;
-; Needed as a fallback for systems that don't report events
-; on sysfs/procfs.
-;
-; Disable polling by setting the interval to 0.
-;
-; Default: 5
-poll-interval = 5
-
-; see "man date" for details on how to format the time string
-; NOTE: if you want to use syntax tags here you need to use %%{...}
-; Default: %H:%M:%S
-time-format = %H:%M
-
-; Available tags:
-;   <label-charging> (default)
-;   <bar-capacity>
-;   <ramp-capacity>
-;   <animation-charging>
-format-charging = <label-charging>
-
-; Available tags:
-;   <label-discharging> (default)
-;   <bar-capacity>
-;   <ramp-capacity>
-;   <animation-discharging>
-format-discharging = <label-discharging>
-
-; Available tags:
-;   <label-full> (default)
-;   <bar-capacity>
-;   <ramp-capacity>
-;format-full = <ramp-capacity> <label-full>
-
-; Available tokens:
-;   %percentage% (default) - is set to 100 if full-at is reached
-;   %percentage_raw%
-;   %time%
-;   %consumption% (shows current charge rate in watts)
-label-charging = Charging %percentage%%
-
-; Available tokens:
-;   %percentage% (default) - is set to 100 if full-at is reached
-;   %percentage_raw%
-;   %time%
-;   %consumption% (shows current discharge rate in watts)
-label-discharging = Discharging %percentage%%
-
-; Available tokens:
-;   %percentage% (default) - is set to 100 if full-at is reached
-;   %percentage_raw%
-label-full = Fully charged
-
-; Only applies if <ramp-capacity> is used
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-
-; Only applies if <bar-capacity> is used
-bar-capacity-width = 10
-
-; Only applies if <animation-charging> is used
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-; Framerate in milliseconds
-animation-charging-framerate = 750
-
-; Only applies if <animation-discharging> is used
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-3 = 
-animation-discharging-4 = 
-; Framerate in milliseconds
-animation-discharging-framerate = 500
-
-format-full-underline = #008000
-format-discharging-underline = #cccc00
-format-charging-underline = #008000
+format-muted-underline = ${colors.alert}
+format-volume-underline = ${colors.primary}
 
 [module/temperature]
 type = internal/temperature
@@ -460,7 +279,7 @@ warn-temperature = 60
 
 ; Whether or not to show units next to the temperature tokens (°C, °F)
 ; Default: true
-units = true
+units = false
 
 ; Available tags:
 ;   <label> (default)
@@ -476,13 +295,13 @@ format-warn = <label-warn>
 ;   %temperature% (deprecated)
 ;   %temperature-c%   (default, temperature in °C)
 ;   %temperature-f%   (temperature in °F)
-label = Core %temperature-c%
+label =   %temperature-c%
 
 ; Available tokens:
 ;   %temperature% (deprecated)
 ;   %temperature-c%   (default, temperature in °C)
 ;   %temperature-f%   (temperature in °F)
-label-warn = Core %temperature-c%
+label-warn =   %temperature-c%
 ;label-warn-foreground = #f00
 
 ; Requires the <ramp> tag
@@ -494,18 +313,5 @@ ramp-1 = B
 ramp-2 = C
 ramp-foreground = #55
 
-format-warn-underline = #f50a4d
-format-underline = #008000
-
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-
-[global/wm]
-margin-top = 5
-margin-bottom = 5
-
-; vim:ft=dosini
+format-warn-underline = ${colors.alert}
+format-underline = ${colors.primary}
