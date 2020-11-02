@@ -11,6 +11,7 @@ antigen bundle autojump
 antigen bundle zsh-users/zsh-completions
 antigen bundle esc/conda-zsh-completion 
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle command-not-found
 
 # Tell Antigen that you're done.
 antigen apply

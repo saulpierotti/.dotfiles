@@ -14,3 +14,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# command not found hook
+source /usr/share/doc/pkgfile/command-not-found.bash
