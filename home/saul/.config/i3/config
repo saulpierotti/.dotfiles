@@ -89,10 +89,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+t floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+t focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -187,23 +187,23 @@ bindsym $mod+r mode "resize"
 
 
 # gaps config
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 gaps inner 10
 gaps outer 0
 
 # autostart
-exec --no-startup-id screenmode.sh
 exec --no-startup-id picom
+exec_always --no-startup-id .config/polybar/launch.sh &
+exec_always --no-startup-id nitrogen --set-scaled --random
 exec --no-startup-id nm-applet
-exec_always --no-startup-id redshift-gtk
+exec --no-startup-id redshift-gtk
 exec --no-startup-id xscreensaver -no-splash
 exec --no-startup-id variety
 exec --no-startup-id twmnd
 exec --no-startup-id udiskie -t
 exec --no-startup-id optimus-manager-qt
 exec --no-startup-id cbatticon
-exec --no-startup-id sbxkb
-exec --no-startup-id ToggleDesktop.sh
+exec_always --no-startup-id sbxkb
 
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioRaiseVolume exec python3 ~/.scripts/volumectl.py up
@@ -215,7 +215,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 # other binds
-bindsym $mod+Shift+n exec bash ~/.scripts/screenmode.sh
+# bindsym $mod+Shift+n exec bash ~/.scripts/screenmode.sh
 bindsym Print exec gnome-screenshot -a -i
 bindsym $mod+p exec xpad
 bindsym $mod+Shift+f exec firefox
