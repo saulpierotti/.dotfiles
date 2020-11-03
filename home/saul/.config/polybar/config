@@ -62,7 +62,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=10;3
 
 modules-left = i3
 modules-center = redshift backlight pulseaudio net_type vpn-nordvpn-status vpn-openvpn-isrunning system-bluetooth-bluetoothctl
-modules-right =  system-usb-udev keyboard temperature  optimus memory cpu battery date poweroff
+modules-right = keyboard temperature  optimus memory cpu battery date poweroff
 
 tray-position = left
 tray-padding = 5
@@ -360,11 +360,12 @@ click-left = /home/saul/.config/polybar/scripts/system-bluetooth-bluetoothctl.sh
 ;format-underline = ${colors.primary}
 
 [module/system-usb-udev]
+; does not work with hdd
 type = custom/script
 exec = /home/saul/.config/polybar/scripts/system-usb-udev.sh
-tail = true
 click-left = /home/saul/.config/polybar/scripts/system-usb-udev.sh --mount &
 click-right = /home/saul/.config/polybar/scripts/system-usb-udev.sh --unmount &
+interval = 0.5
 
 [module/redshift]
 type = custom/script
