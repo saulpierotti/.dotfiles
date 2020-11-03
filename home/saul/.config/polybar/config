@@ -62,7 +62,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=10;3
 
 modules-left = i3
 modules-center = xwindow
-modules-right = vpn-nordvpn-status keyboard backlight redshift pulseaudio optimus temperature ping_status date battery 
+modules-right = keyboard backlight redshift pulseaudio optimus temperature system-bluetooth-bluetoothctl vpn-nordvpn-status vpn-openvpn-isrunning net_type ping_status date system-usb-udev battery 
 
 tray-position = right
 tray-padding = 5
@@ -80,9 +80,22 @@ exec = ~/.config/polybar/scripts/vpn-nordvpn-status.sh
 interval = 5
 format-underline = ${colors.primary}
 
+[module/vpn-openvpn-isrunning]
+type = custom/script
+exec = ~/.config/polybar/scripts/vpn-openvpn-isrunning.sh
+format-underline = ${colors.primary}
+interval = 5
+
 [module/ping_status]
 type = custom/script
 exec = ~/.config/polybar/scripts/ping_status.sh
+interval = 5
+format-underline = ${colors.alert}
+
+[module/net_type]
+type = custom/script
+exec = ~/.config/polybar/scripts/net_type.sh
+click-left = nm-connection-editor &
 interval = 5
 format-underline = ${colors.primary}
 
@@ -315,6 +328,20 @@ scroll-up = light -A 5
 scroll-down = light -U 5
 interval = 0.1
 format-underline = ${colors.primary}
+
+[module/system-bluetooth-bluetoothctl]
+type = custom/script
+exec = /home/saul/.config/polybar/scripts/system-bluetooth-bluetoothctl.sh
+tail = true
+click-left = /home/saul/.config/polybar/scripts/system-bluetooth-bluetoothctl.sh --toggle &
+format-underline = ${colors.primary}
+
+[module/system-usb-udev]
+type = custom/script
+exec = /home/saul/.config/polybar/scripts/system-usb-udev.sh
+tail = true
+click-left = /home/saul/.config/polybar/scripts/system-usb-udev.sh --mount &
+click-right = /home/saul/.config/polybar/scripts/system-usb-udev.sh --unmount &
 
 [module/redshift]
 type = custom/script
