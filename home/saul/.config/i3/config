@@ -203,15 +203,13 @@ gaps outer 0
 
 # autostart
 exec --no-startup-id picom
-exec --no-startup-id xscreensaver -no-splash
 exec --no-startup-id variety
 exec --no-startup-id twmnd
 exec --no-startup-id udiskie -s
-exec --no-startup-id source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh toggle
+exec --no-startup-id exec --no-startup-id xscreensaver -no-splash
 exec_always --no-startup-id .config/polybar/launch.sh &
 exec_always --no-startup-id nitrogen --set-scaled --random
 
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioRaiseVolume exec python3 ~/.scripts/volumectl.py up
 bindsym XF86AudioLowerVolume exec python3 ~/.scripts/volumectl.py down
 bindsym XF86AudioMute exec python3 ~/.scripts/volumectl.py mute

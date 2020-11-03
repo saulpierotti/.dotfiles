@@ -25,7 +25,7 @@ case $1 in
       redshift -x
     else
       changeMode "$REDSHIFT" on
-      redshift -o
+      redshift -O 3600
     fi
     ;;
 #  increase)
