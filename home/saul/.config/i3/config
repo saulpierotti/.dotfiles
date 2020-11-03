@@ -216,6 +216,9 @@ bindsym XF86AudioMute exec python3 ~/.scripts/volumectl.py mute
 # backlight
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id light -A 5
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id light -U 5
+bindsym Shift+XF86AudioMute exec source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh toggle
 
 # other binds
 # bindsym $mod+Shift+n exec bash ~/.scripts/screenmode.sh
