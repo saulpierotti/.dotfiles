@@ -203,13 +203,11 @@ gaps outer 0
 
 # autostart
 exec --no-startup-id picom
-exec --no-startup-id nm-applet
 exec --no-startup-id xscreensaver -no-splash
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id variety
 exec --no-startup-id twmnd
-exec --no-startup-id udiskie -t
-exec --no-startup-id optimus-manager-qt
+exec --no-startup-id udiskie -s
+exec --no-startup-id source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh toggle
 exec_always --no-startup-id .config/polybar/launch.sh &
 exec_always --no-startup-id nitrogen --set-scaled --random
 
