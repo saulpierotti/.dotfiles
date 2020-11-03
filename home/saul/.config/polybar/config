@@ -61,7 +61,7 @@ font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
 font-5 = Font Awesome 5 Brands:pixelsize=10;3
 
 modules-left = i3
-modules-center = redshift backlight pulseaudio net_type vpn-nordvpn-status vpn-openvpn-isrunning system-bluetooth-bluetoothctl
+modules-center = redshift backlight pulseaudio net_type vpn-nordvpn-status vpn-openvpn-isrunning system-bluetooth-bluetoothctl usb
 modules-right = keyboard temperature  optimus memory cpu battery date poweroff
 
 tray-position = left
@@ -117,8 +117,18 @@ click-left = nm-connection-editor &
 [module/net_type]
 type = custom/script
 exec = ~/.config/polybar/scripts/net_type.sh
-click-left = nm-connection-editor &
-interval = 5
+click-left = nm-applet --indicator &
+click-right = killall -9 nm-applet &
+interval = 1
+;format-underline = ${colors.primary}
+
+[module/usb]
+type = custom/script
+label =   %output%
+exec = ~/.config/polybar/scripts/usb_detect.sh
+click-left = udiskie -t &
+click-right = killall udiskie
+interval = 0.1
 ;format-underline = ${colors.primary}
 
 [module/optimus]
