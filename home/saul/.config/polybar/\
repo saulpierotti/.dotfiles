@@ -62,14 +62,13 @@ font-5 = Font Awesome 5 Brands:pixelsize=10;3
 
 modules-left = i3
 modules-center = redshift backlight pulseaudio net_type vpn-nordvpn-status vpn-openvpn-isrunning system-bluetooth-bluetoothctl usb
-modules-right = keyboard temperature  optimus memory cpu filesystem battery date poweroff
+modules-right = keyboard temperature  optimus memory cpu battery filesystem date poweroff
 
 tray-position = left
 tray-padding = 5
 
 cursor-click = pointer
 cursor-scroll =
-;separator = |
 
 [module/filesystem]
 type = internal/fs
@@ -88,7 +87,7 @@ fixed-values = true
 ; Spacing between entries
 ; Default: 2
 spacing = 4
-label-mounted =  %percentage_free%
+label-mounted =   %percentage_free%
 
 [module/memory]
 type = internal/memory
