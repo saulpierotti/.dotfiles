@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
 
-disconnected=" "
+limited=" "
+disconnected="  "
 
-if (fping -q -x1 google.com github.com archlinux.org) &>/dev/null; then
+
+if `nmcli networking connectivity check|grep -q full` ; then
     echo ""
-else
+elif `nmcli networking connectivity check|grep -q limited` ; then
+    echo "$limited"
+elif `nmcli networking connectivity check|grep -q none` ; then
     echo "$disconnected"
+else
+    echo "bug in ping_status.sh"
 fi

@@ -61,7 +61,7 @@ font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
 font-5 = Font Awesome 5 Brands:pixelsize=10;3
 
 modules-left = i3
-modules-center = redshift backlight pulseaudio net_type vpn-nordvpn-status vpn-openvpn-isrunning system-bluetooth-bluetoothctl usb
+modules-center = redshift backlight pulseaudio net_type ping_status vpn-nordvpn-status vpn-openvpn-isrunning system-bluetooth-bluetoothctl usb
 modules-right = keyboard temperature  optimus memory cpu filesystem battery date poweroff
 
 tray-position = left
@@ -130,9 +130,10 @@ interval = 5
 ; this module cause network hangs with nordvpn after disconnect
 type = custom/script
 exec = ~/.config/polybar/scripts/ping_status.sh
-interval = 10
+interval = 5
 format-underline = ${colors.alert}
 click-left = nm-connection-editor &
+click-right = killall -9 nm-applet &
 
 [module/net_type]
 type = custom/script
