@@ -16,8 +16,9 @@
 ;
 ;==========================================================
 [refresh]
+instant = 0.01
 fast = 0.1
-medium = 5
+medium = 1
 slow = 3600
 
 [colors]
@@ -138,7 +139,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/net_type.sh
 click-left = nm-applet --indicator &
 click-right = killall -9 nm-applet &
-interval = ${refresh.fast}
+interval = ${refresh.medium}
 ;format-underline = ${colors.primary}
 
 [module/usb]
@@ -147,7 +148,7 @@ label =   %output%
 exec = ~/.config/polybar/scripts/usb_detect.sh
 click-left = udiskie -t &
 click-right = killall udiskie
-interval = ${refresh.fast}
+interval = ${refresh.medium}
 ;format-underline = ${colors.primary}
 
 [module/optimus]
@@ -378,7 +379,7 @@ exec = light -G| cut -d "." -f 1|echo  $(</dev/stdin)
 click-left = echo ""
 scroll-up = light -A 5
 scroll-down = light -U 5
-interval = ${refresh.fast}
+interval = ${refresh.instant}
 ;format-underline = ${colors.primary}
 
 [module/system-bluetooth-bluetoothctl]
