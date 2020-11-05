@@ -66,7 +66,7 @@ font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
 font-5 = Font Awesome 5 Brands:pixelsize=10;3
 
 modules-left = i3
-modules-center = redshift backlight audio net_type ping_status vpn-status system-bluetooth-bluetoothctl usb
+modules-center = redshift backlight audio net_status vpn_status system-bluetooth-bluetoothctl usb
 modules-right = keyboard temperature  optimus memory cpu filesystem battery date poweroff
 
 tray-position = left
@@ -101,9 +101,15 @@ exec = echo ""
 click-left = poweroff.sh
 ;format-underline = ${colors.primary}
 
-[module/vpn-status]
+[module/net_status]
 type = custom/script
-exec = ~/.config/polybar/scripts/vpn-status.sh
+exec = ~/.config/polybar/scripts/net_status.sh
+interval = ${refresh.fast}
+;format-underline = ${colors.primary}
+
+[module/vpn_status]
+type = custom/script
+exec = ~/.config/polybar/scripts/vpn_status.sh
 interval = ${refresh.medium}
 ;format-underline = ${colors.primary}
 
