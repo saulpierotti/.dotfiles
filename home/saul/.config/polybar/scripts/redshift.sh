@@ -37,10 +37,10 @@ case $1 in
   status)
     case $REDSHIFT in
       on)
-        printf "  "
+        printf ""
         ;;
       off)
-        printf "  "
+        printf ""
         ;;
     esac
     ;;

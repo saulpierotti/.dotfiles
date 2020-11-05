@@ -209,9 +209,9 @@ exec --no-startup-id xscreensaver -no-splash
 exec_always --no-startup-id .config/polybar/launch.sh &
 exec_always --no-startup-id nitrogen --set-scaled --random
 
-bindsym XF86AudioRaiseVolume exec python3 ~/.scripts/volumectl.py up
-bindsym XF86AudioLowerVolume exec python3 ~/.scripts/volumectl.py down
-bindsym XF86AudioMute exec python3 ~/.scripts/volumectl.py mute
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # backlight
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
