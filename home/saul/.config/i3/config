@@ -120,7 +120,7 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
+set $ws9 "9: "
 set $ws10 "10: "
 
 # switch to workspace
@@ -153,10 +153,11 @@ assign [class="Timeshift-gtk"] $ws10
 assign [class="Back In Time"] $ws10
 assign [class="Grsync"] $ws10
 assign [class="Google-chrome"] $ws1
+assign [class="Bitwarden"] $ws9
 
 # toggle workspace focus
 bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth
+# bindsym $mod+Shift+b move container to workspace back_and_forth
 
 # toggle screen for current workspace
 bindsym $mod+x move workspace to output righ
@@ -223,11 +224,10 @@ bindsym Shift+XF86AudioMute exec source ~/.config/polybar/scripts/env.sh && ~/.c
 # other binds
 # bindsym $mod+Shift+n exec bash ~/.scripts/screenmode.sh
 bindsym Print exec gnome-screenshot -a -i
-bindsym $mod+p exec xpad
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+i exec firefox --private-window
-bindsym $mod+Shift+m exec i3-sensible-terminal -T neomutt -e neomutt
 bindsym $mod+Shift+g exec google-chrome-stable
+bindsym $mod+Shift+b exec bitwarden
 
 # poweroff
 bindsym XF86PowerOff exec --no-startup-id ~/.scripts/poweroff.sh

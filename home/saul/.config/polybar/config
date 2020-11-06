@@ -104,6 +104,8 @@ click-left = poweroff.sh
 [module/net_status]
 type = custom/script
 exec = ~/.config/polybar/scripts/net_status.sh
+click-left = ~/.config/polybar/scripts/nm_applet_launch.sh &
+click-right = killall nm-applet &
 interval = ${refresh.fast}
 ;format-underline = ${colors.primary}
 
@@ -115,10 +117,9 @@ interval = ${refresh.medium}
 
 [module/usb]
 type = custom/script
-label =   %output%
 exec = ~/.config/polybar/scripts/usb_detect.sh
-click-left = udiskie -t &
-click-right = killall udiskie
+click-left = ~/.config/polybar/scripts/udiskie_launch.sh &
+click-right = killall udiskie &
 interval = ${refresh.medium}
 ;format-underline = ${colors.primary}
 
