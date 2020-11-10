@@ -206,7 +206,7 @@ gaps outer 0
 exec --no-startup-id picom
 exec --no-startup-id variety
 exec --no-startup-id twmnd
-exec --no-startup-id xautolock -locker slock -notify 30 -notifier 'light -T 0.5'
+exec --no-startup-id xautolock -locker slock -notify 30 -notifier dim_light.sh
 exec_always --no-startup-id .config/polybar/launch.sh &
 exec_always --no-startup-id nitrogen --set-scaled --random
 
