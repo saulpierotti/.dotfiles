@@ -55,22 +55,21 @@ line-size = 5
 padding-left = 2
 padding-right = 2
 
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 2
+module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:pixelsize=10;3
-font-4 = Font Awesome 5 Free Solid:pixelsize=10;3
-font-5 = Font Awesome 5 Brands:pixelsize=10;3
+font-0 = "Noto Sans Display:size=11;3"
+font-1 = "Source Code Pro:style=Regular:size=11;0"
+font-2 = Font Awesome 5 Free:pixelsize=10;3
+font-3 = Font Awesome 5 Free Solid:pixelsize=10;3
+font-4 = Font Awesome 5 Brands:pixelsize=10;3
 
 modules-left = i3
-modules-center = redshift backlight audio net_status vpn_status system-bluetooth-bluetoothctl usb
-modules-right = keyboard temperature  optimus memory cpu filesystem battery date poweroff
+modules-center = date vpn_status 
+modules-right = redshift backlight audio keyboard temperature optimus memory cpu filesystem
 
-tray-position = left
-tray-padding = 5
+tray-position = right
+tray-padding = 0
 
 cursor-click = pointer
 cursor-scroll =
@@ -391,7 +390,7 @@ format = <label>
 ;   %time%
 ; Default: %date%
 label = %date% %time%
-label-font = 3
+; label-font = 3
 ;label-foreground = #9A32DB
 ;format-underline = ${colors.primary}
 
@@ -497,5 +496,5 @@ fixed-values = true
 ; Spacing between entries
 ; Default: 2
 spacing = 4
-label-mounted =  %percentage_free%
+label-mounted =   %percentage_free%
 
