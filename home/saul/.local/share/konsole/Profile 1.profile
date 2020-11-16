@@ -10,9 +10,13 @@ CursorShape=1
 
 [General]
 DimWhenInactive=false
+Icon=utilities-terminal-symbolic.symbolic
 Name=Profile 1
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
+
+[Keyboard]
+KeyBindings=linux
 
 [Scrolling]
 ScrollBarPosition=2
