@@ -53,6 +53,7 @@ Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'altercation/vim-colors-solarized'
+Plug 'tomasr/molokai'
 
 " All of your Plugins must be added before the following line
 call plug#end()
@@ -95,8 +96,8 @@ augroup my_colours
 augroup END
 
 " sets theme
-colorscheme gruvbox
-set background=dark
+" for transparency
+colorscheme molokai
 
 " Map F5 key to code execution through quickrun and hsplit
 nnoremap <F5> :QuickRun<CR>
@@ -131,7 +132,7 @@ map <C-p> "+P
 
 " airline configs
 let g:airline_powerline_fonts = 1
-let g:airline_theme="gruvbox"
+let g:airline_theme= "minimalist"
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif

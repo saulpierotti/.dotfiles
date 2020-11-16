@@ -20,7 +20,7 @@ ranger() {
 export TERMCMD="i3-sensible-terminal"
 
 # for rofi
-export TERMINAL="terminator"
+export TERMINAL="konsole"
 
 # text editor
 export EDITOR="nvim"
