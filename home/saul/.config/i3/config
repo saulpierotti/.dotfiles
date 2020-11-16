@@ -26,25 +26,18 @@ font pango:Fira Code 11
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
-# color combinations
+# ------------------------- COLORS  -------------------------
+set $fg-color #0C73C2
+set $bg-color #1B1D1E
+set $bg2-color #505354
+set $contrast-color #F92672
 
-# set primary gruvbox colorscheme colors
-set $bg #282828
-set $red #cc241d
-set $green #98971a
-set $yellow #d79921
-set $blue #458588
-set $purple #b16286
-set $aqua #689d68
-set $gray #a89984
-set $darkgray #1d2021
 
-# The border is defined by child_border
-# class                 border  backgr. text    indicator child_border
-client.focused          $blue $blue $darkgray $purple $blue
-client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
-client.urgent           $red $red $white $red $red
+# class                  border            backgr.            text            indicator        child_border
+client.focused           $bg-color         $fg-color          $bg-color       $fg-color        $fg-color
+client.focused_inactive  $bg-color         $bg2-color         $bg-color       $bg2-color       $bg2-color
+client.unfocused         $bg-color         $bg-color          $bg2-color      $bg-color        $bg-color
+client.urgent            $contrast-color   $contrast-color    $bg-color       $contrast-color  $contrast-color
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
