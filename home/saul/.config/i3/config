@@ -202,12 +202,19 @@ exec --no-startup-id picom
 exec --no-startup-id variety
 exec --no-startup-id twmnd
 exec --no-startup-id xautolock -locker slock -notify 30 -notifier dim_light.sh
-exec --no-startup-id nm-applet
-exec --no-startup-id udiskie -t
-exec --no-startup-id blueman-applet
+exec --no-startup-id optimus-manager-qt
 exec_always --no-startup-id .config/polybar/launch.sh &
 exec_always --no-startup-id nitrogen --set-scaled --random
+# start polkit, that manages authentication for GUI apps
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
+
+# tray elements, in the order of appearance
+exec --no-startup-id udiskie -t
+exec --no-startup-id blueman-applet
+exec --no-startup-id nm-applet
+
+# audio
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -220,12 +227,10 @@ bindsym Shift+XF86AudioLowerVolume exec --no-startup-id light -U 5
 bindsym Shift+XF86AudioMute exec source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh toggle
 
 # other binds
-# bindsym $mod+Shift+n exec bash ~/.scripts/screenmode.sh
 bindsym Print exec gnome-screenshot -a -i
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+i exec firefox --private-window
 bindsym $mod+Shift+g exec google-chrome-stable
-bindsym $mod+Shift+b exec bitwarden
 
 # poweroff
 bindsym XF86PowerOff exec --no-startup-id ~/.scripts/poweroff.sh
@@ -233,8 +238,6 @@ bindsym Scroll_Lock exec --no-startup-id ~/.scripts/poweroff.sh
 
 # Restore GNOME's settings
 exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
-# start polkit, that manages authentication for GUI apps
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
@@ -261,6 +264,8 @@ for_window [class="fiji-Main"]                          floating enable
 for_window [class="Toplevel"]                           floating enable
 for_window [class="Org.gnome.Nautilus"]                 floating enable
 for_window [class="GParted"]                            floating enable
+# for_window [class="zoom"]                               floating enable
+for_window [class="Skype"]                              floating enable
 
 # by ROLE (WM_WINDOW_ROLE)
 # Note: window_role is Typically useful for effecting child windows

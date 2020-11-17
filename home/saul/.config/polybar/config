@@ -61,8 +61,8 @@ font-3 = Font Awesome 5 Free Solid:pixelsize=11;3
 font-4 = Font Awesome 5 Brands:pixelsize=11;3
 
 modules-left = i3
-modules-center = date vpn_status 
-modules-right = redshift backlight audio keyboard temperature optimus memory cpu filesystem
+modules-center = date vpn_status
+modules-right = redshift backlight audio kernel temperature memory cpu filesystem keyboard
 
 tray-position = right
 tray-padding = 0
@@ -116,6 +116,13 @@ exec = ~/.config/polybar/scripts/usb_detect.sh
 click-left = ~/.config/polybar/scripts/udiskie_launch.sh &
 click-right = killall udiskie &
 interval = ${refresh.medium}
+;format-underline = ${colors.primary}
+
+[module/kernel]
+type = custom/script
+exec = echo "$(cat /etc/issue|cut -d' ' -f -2) $(cat /proc/version|grep Linux|cut -d' ' -f 3)"
+label =   %output%
+interval = ${refresh.slow}
 ;format-underline = ${colors.primary}
 
 [module/optimus]
