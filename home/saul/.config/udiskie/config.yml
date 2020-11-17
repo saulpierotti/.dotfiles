@@ -1,0 +1,6 @@
+# Do not show loop devices mounts (useful to hide snap loop devices).
+
+device_config:
+  - is_loop: true
+    loop_file: /var/lib/snapd/*
+    ignore: true
