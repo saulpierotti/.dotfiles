@@ -15,6 +15,9 @@ set autochdir
 " don't wrap long lines
 "set nowrap
 
+" hide the --INSERT-- and other status (since it is shown by airline)
+set noshowmode 
+
 " all plugins here, managed by vim-plugged
 call plug#begin('~/.vim/plugged')
 
