@@ -1,4 +1,4 @@
-# .dotfiles
+# Saul Dotfiles
 
 This repo contains some of my essential config files for ArchLinux on Acer Aspire 5.
 The files are symlinked to the correct location in my system.
