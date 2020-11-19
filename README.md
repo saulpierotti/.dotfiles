@@ -6,7 +6,7 @@ I am using this repo mainly as a backup.
 
 ## Bootloader
 * I am using Grub2 with the `arch-silence-grub-theme-git` theme
-* I use `grub-btrfs` to see also btrfs snapshot in the boot menu
+* I use `grub-btrfs` to see also btrfs snapshots in the boot menu
 
 ## Kernel
 * I use linux-zen and I also installed the headers
@@ -33,7 +33,7 @@ I am using this repo mainly as a backup.
 
 ## Login Manager
 * I am using LightDM with the webkit2 `lightdm-webkit-theme-litarvan` theme
-* The user avatar and name (Saul Pierotti, non the user name) are better managed from the gnome settings panel (login to gnome!)
+* The user avatar and name (Saul Pierotti, not the user name) are better managed from the gnome settings panel (login to gnome!)
 	* For some reason when I change the picture manually it does not work
 
 ## Window Manager
