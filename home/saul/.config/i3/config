@@ -201,7 +201,10 @@ gaps outer 0
 exec --no-startup-id picom
 exec --no-startup-id variety
 exec --no-startup-id twmnd
-exec --no-startup-id xautolock -locker slock -notify 30 -notifier dim_light.sh
+# use lightDM login as a lockscreen
+exec --no-startup-id light-locker
+# uncomment this to use slock with xautolock and my personal script for notification of imminent lock
+# exec --no-startup-id xautolock -locker slock -notify 30 -notifier dim_light.sh
 exec --no-startup-id optimus-manager-qt
 exec_always --no-startup-id .config/polybar/launch.sh &
 exec_always --no-startup-id nitrogen --set-scaled --random
