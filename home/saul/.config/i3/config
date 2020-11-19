@@ -208,8 +208,7 @@ exec_always --no-startup-id nitrogen --set-scaled --random
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # lockscreen
-exec --no-startup-id light-locker
-exec --no-startup-id xautolock -locker "light-locker-command -l" -notify 30 -notifier dim_light.sh
+exec --no-startup-id light-locker --late-locking --lock-after-screensaver=10
 
 # tray elements, in the order of appearance
 exec --no-startup-id udiskie -t
