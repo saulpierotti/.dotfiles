@@ -30,6 +30,8 @@ I am using this repo mainly as a backup.
 * Given the problem for TTY switching with Nvidia, do not use the lock when in Nvidia mode
 	* If the screen gets locked in nvidia mode: press space, then write the passwrd and press enter. The lockscreen is working even if the screen no
 	* After unlocking like this once, then the screen lock works in nvidia mode until the next logout
+* Inhibition of the lockscreen is done with exam_mode.sh and inhibited with exam_mode_undo.sh
+	* They just call xset and disable/enable blanking and screen poweroff
 
 ## Login Manager
 * I am using LightDM with the webkit2 `lightdm-webkit-theme-litarvan` theme
