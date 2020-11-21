@@ -4,6 +4,9 @@ This repo contains some of my essential config files for ArchLinux on Acer Aspir
 The files are symlinked to the correct location in my system.
 I am using this repo mainly as a backup.
 
+
+# Notes to Myself
+
 ## Bootloader
 * I am using Grub2 with the `arch-silence-grub-theme-git` theme
 * I use `grub-btrfs` to see also btrfs snapshots in the boot menu
@@ -51,3 +54,10 @@ I am using this repo mainly as a backup.
 ## Console
 * I use zsh
 
+## Connectivity
+* I use network-manager, managed mostly via the nm-applet
+* I implemented a WiFi hotspot with network-manager and dnsmasq
+	* For connection sharing, netowrk manager requires the optional dependency `dnsmasq`
+	* I created a fake WiFi network from network manager using WPA2 encription and a key longer than 8 charachters
+	* The mode of the network must be set ot Hotspot
+	* To activate the hotspot, just connect to the network (connect to hidden network and select hotspot, or from command line)
