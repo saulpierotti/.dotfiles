@@ -21,7 +21,6 @@ set noshowmode
 " all plugins here, managed by vim-plugged
 call plug#begin('~/.vim/plugged')
 
-Plug 'thinca/vim-quickrun'			"allows execution of code in a separate window
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'			" git wrapper for vim
@@ -99,11 +98,7 @@ augroup my_colours
 augroup END
 
 " sets theme
-" for transparency
 colorscheme molokai
-
-" Map F5 key to code execution through quickrun and hsplit
-nnoremap <F5> :QuickRun<CR>
 
 " shows the current row and coloumn
 set ruler
