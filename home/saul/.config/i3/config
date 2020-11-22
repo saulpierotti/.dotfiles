@@ -229,6 +229,7 @@ bindsym Shift+XF86AudioMute exec source ~/.config/polybar/scripts/env.sh && ~/.c
 
 # other binds
 bindsym Print exec gnome-screenshot -a -i
+bindsym XF86Calculator exec galculator
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+i exec firefox --private-window
 bindsym $mod+Shift+g exec google-chrome-stable
@@ -267,6 +268,7 @@ for_window [class="Org.gnome.Nautilus"]                 floating enable
 for_window [class="GParted"]                            floating enable
 # for_window [class="zoom"]                               floating enable
 for_window [class="Skype"]                              floating enable
+for_window [class="Galculator"]                         floating enable
 
 # by ROLE (WM_WINDOW_ROLE)
 # Note: window_role is Typically useful for effecting child windows
