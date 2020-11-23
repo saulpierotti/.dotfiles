@@ -6,6 +6,7 @@ spacer_len=${#spacer}
 raw_out="$spacer"
 no_true_cond=true
 
+# nordvpn connection test
 if nordvpn status | grep Status | tr -d ' ' | cut -d ':' -f2 | grep -q Connected; then
     nordvpn_country="NordVPN-$(nordvpn status | grep Country | cut -d ':' -f2|xargs)"
     raw_out="$raw_out$nordvpn_country$spacer"
@@ -14,8 +15,15 @@ fi
 
 
 # ovpn connection test
-if  pgrep -a openvpn$ |head -n 1| grep -vq nordvpn; then
+if  pgrep -a openvpn$ |head -n 1| grep -vq nordvpn && pgrep -a openvpn$ |head -n 1| grep -vq  nm-openvpn; then
     name=$(pgrep -a openvpn$ | head -n 1 | awk '{print $NF }' | cut -d '.' -f 1|rev|cut -d '/' -f '1'|rev)
+    raw_out="$raw_out$name$spacer"
+    no_true_cond=false
+fi
+
+# ovpn connection test
+if  nmcli connection show --active|grep -q vpn; then
+    name="$(nmcli connection show --active|grep vpn|cut -d' ' -f1)"
     raw_out="$raw_out$name$spacer"
     no_true_cond=false
 fi
