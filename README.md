@@ -53,6 +53,7 @@ I am using this repo mainly as a backup.
 ## Terminal
 * I use kitty since it supports fonts with ligatures (I use Fira Code) and it is GPU-accellerated
 * I changed `$TERM` (in .zshevnv) from `xterm-kitty` to `xterm-256color` so that colors are shown in ssh sessions
+* I did not set zsh autocompletion for kitty in `.zshrc` since I am using zsh-completions with antigen
 
 ## Console
 * I use zsh
