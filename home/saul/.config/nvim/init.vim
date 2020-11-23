@@ -64,8 +64,6 @@ set clipboard+=unnamedplus
 set mouse=a
 " set cwd to the one open
 set autochdir
-" don't wrap long lines
-"set nowrap
 " hide the --INSERT-- and other status (since it is shown by airline)
 set noshowmode 
 " enable autocompletion
@@ -81,6 +79,8 @@ set list
 set ruler
 " do not show indentation like if it is code
 let g:indentguides_ignorelist = ['markdown']
+" fold according to the syntax of the language
+set foldmethod=syntax
 " show line number column
 "set number relativenumber
 " show absolute numbers in insert mode

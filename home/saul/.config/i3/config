@@ -199,11 +199,9 @@ gaps outer 0
 
 # autostart
 exec --no-startup-id picom
-exec --no-startup-id variety
 exec --no-startup-id twmnd
 exec --no-startup-id optimus-manager-qt
 exec_always --no-startup-id .config/polybar/launch.sh &
-exec_always --no-startup-id nitrogen --set-scaled --random
 # start polkit, that manages authentication for GUI apps
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
