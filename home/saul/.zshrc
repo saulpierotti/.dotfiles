@@ -46,3 +46,8 @@ bindkey -s '^[^o' 'source ranger_launcher_sudo.sh\n'
 
 # open nautilus in working dir
 bindkey -s '^f' 'nautilus .&; disown\n'
+
+autoload -Uz compinit
+compinit
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin

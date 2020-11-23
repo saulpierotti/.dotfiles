@@ -33,7 +33,7 @@ Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/goyo.vim'
-Plug 'Raimondi/delimitMate'
+	Plug 'Raimondi/delimitMate'
 Plug 'lervag/vimtex'
 
 " general code completers
@@ -257,3 +257,6 @@ tnoremap <silent><A-t> <C-\><C-n>:call TermToggle(12)<CR>
 " delimitMate confs
 au FileType markdown,tex,bib let b:delimitMate_quotes = "\" ' ` $"
 au FileType markdown,tex,bib let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
+
+" hide background to show transparency (needed in kitty, not in konsole)
+highlight Normal ctermbg=none

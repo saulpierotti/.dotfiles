@@ -18,9 +18,8 @@ ranger() {
 
 # set default terminal
 export TERMCMD="i3-sensible-terminal"
-
-# for rofi
-export TERMINAL="konsole"
+export TERMINAL="kitty"
+export TERM="xterm-256color"
 
 # text editor
 export EDITOR="nvim"
