@@ -15,6 +15,9 @@ set autochdir
 " don't wrap long lines
 "set nowrap
 
+" Enable true colors in terminal
+set termguicolors
+
 " hide the --INSERT-- and other status (since it is shown by airline)
 set noshowmode 
 
@@ -258,5 +261,8 @@ tnoremap <silent><A-t> <C-\><C-n>:call TermToggle(12)<CR>
 au FileType markdown,tex,bib let b:delimitMate_quotes = "\" ' ` $"
 au FileType markdown,tex,bib let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
-" hide background to show transparency (needed in kitty, not in konsole)
-highlight Normal ctermbg=none
+" COLOR TWEAKS
+" Since I am using termguicolors, I need to declare colors for gui not cterm!
+highlight Normal guibg=none
+highlight LineNr guibg=none
+
