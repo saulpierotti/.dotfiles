@@ -47,9 +47,12 @@ I am using this repo mainly as a backup.
 
 ## Text Editor
 * I use nvim
+* I disabled the background color so to use the terminal background with `highlight Normal ctermbg=none`
+	* This must be after the theme declaration to be effective
 
 ## Terminal
-* I use konsole since it supports fonts with ligatures (I use Fira Code)
+* I use kitty since it supports fonts with ligatures (I use Fira Code) and it is GPU-accellerated
+* I changed `$TERM` (in .zshevnv) from `xterm-kitty` to `xterm-256color` so that colors are shown in ssh sessions
 
 ## Console
 * I use zsh
@@ -61,3 +64,5 @@ I am using this repo mainly as a backup.
 	* I created a fake WiFi network from network manager using WPA2 encription and a key longer than 8 charachters
 	* The mode of the network must be set ot Hotspot
 	* To activate the hotspot, just connect to the network (connect to hidden network and select hotspot, or from command line)
+* I set `dnsmasq` as the default dns method for NetworkManager in `/etc/NetwrokManager/conf.d/00-use-dnsmasq.conf`
+* For the biocomp VPN to work, you have to go to the IPV4 tab in the VPN page of `nm-connection-editor`, go to Routes and select "Use this connection only for resources in this network"
