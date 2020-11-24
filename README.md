@@ -6,7 +6,6 @@ I am using this repo mainly as a backup.
 
 # To Do
 * Set up the desktop widget conky (and possibly remove stuff from polybar)
-* When logging in there is a second of lag before the wallpaper is set, and an ugly solid grey background is shown
 
 # Notes to Myself
 
@@ -48,7 +47,8 @@ I am using this repo mainly as a backup.
 * I am using i3-gapps, and I keep gnome as a fallback
 * In i3, I use polybar as a status bar
 * Notifications are managed by twmnc
-* The wallpaper is set by feh in `~/.config/i3/config`
+* The wallpaper is set by feh in `~/.xsession`
+	* Note: it has to have executable permissions!
 
 ## Text Editor
 * I use nvim

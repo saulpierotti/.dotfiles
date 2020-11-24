@@ -19,7 +19,7 @@ ranger() {
 # set default terminal
 export TERMCMD="i3-sensible-terminal"
 export TERMINAL="kitty"
-export TERM="xterm-256color"
+export TERM="xterm-kitty"
 
 # text editor
 export EDITOR="nvim"

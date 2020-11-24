@@ -81,6 +81,8 @@ set ruler
 let g:indentguides_ignorelist = ['markdown']
 " fold according to the syntax of the language
 set foldmethod=syntax
+" but do not fold by default
+set nofoldenable
 " show line number column
 "set number relativenumber
 " show absolute numbers in insert mode
@@ -99,7 +101,6 @@ colorscheme molokai
 " Since I am using termguicolors, I need to declare colors for gui not cterm!
 " Disable background to use transparency in terminal
 highlight Normal guibg=none
-highlight LineNr guibg=none
 
 
 
