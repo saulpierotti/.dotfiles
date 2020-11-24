@@ -1,43 +1,33 @@
 #!/bin/sh
 
-spacer='  '
-symbol=" "
+spacer='    '
+symbol="  "
 spacer_len=${#spacer}
-raw_out="$spacer"
-no_true_cond=true
 
-# nordvpn connection test
+# nordvpn
 if nordvpn status | grep Status | tr -d ' ' | cut -d ':' -f2 | grep -q Connected; then
     nordvpn_country="NordVPN-$(nordvpn status | grep Country | cut -d ':' -f2|xargs)"
-    raw_out="$raw_out$nordvpn_country$spacer"
-    no_true_cond=false
+    raw_out="$symbol$nordvpn_country$spacer"
 fi
 
 
-# ovpn connection test
+# ovpn
 if  pgrep -a openvpn$ |head -n 1| grep -vq nordvpn && pgrep -a openvpn$ |head -n 1| grep -vq  nm-openvpn; then
     name=$(pgrep -a openvpn$ | head -n 1 | awk '{print $NF }' | cut -d '.' -f 1|rev|cut -d '/' -f '1'|rev)
-    raw_out="$raw_out$name$spacer"
-    no_true_cond=false
+    raw_out="$raw_out$symbol$name$spacer"
 fi
 
-# ovpn connection test
+# networkmanager vpn
 if  nmcli connection show --active|grep -q vpn; then
     name="$(nmcli connection show --active|grep vpn|cut -d' ' -f1)"
-    raw_out="$raw_out$name$spacer"
-    no_true_cond=false
+    raw_out="$raw_out$symbol$name$spacer"
 fi
 
-# trim the spacer at the beginning and end
-if [ $no_true_cond = true ]; then
-    raw_out="$raw_out$spacer"
-    symbol_conditional=""
-else
-    symbol_conditional="$symbol "
-fi
 raw_out_len=${#raw_out}
-substr_start=$(($spacer_len))
-substr_lenght=$(($raw_out_len-2*$spacer_len))
-out=$symbol_conditional${raw_out:$substr_start:$substr_lenght}
+substr_lenght=$(($raw_out_len-$spacer_len))
 
-echo "$out"
+if [ $substr_lenght > 0 ]; then
+    out=${raw_out::$substr_lenght}
+    echo "$out"
+fi
+
