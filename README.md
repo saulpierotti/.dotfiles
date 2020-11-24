@@ -72,3 +72,6 @@ I am using this repo mainly as a backup.
 	* To activate the hotspot, just connect to the network (connect to hidden network and select hotspot, or from command line)
 * I set `dnsmasq` as the default dns method for NetworkManager in `/etc/NetwrokManager/conf.d/00-use-dnsmasq.conf`
 * For the biocomp VPN to work, you have to go to the IPV4 tab in the VPN page of `nm-connection-editor`, go to Routes and select "Use this connection only for resources in this network"
+
+## Media
+* I use mpv for videos
