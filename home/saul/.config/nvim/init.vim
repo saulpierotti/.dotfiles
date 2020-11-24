@@ -6,91 +6,66 @@
 " PLUGINS (vim plugged)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-
-" general plugins
+" airline statusbar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'                   " git wrapper
+" git wrapper, just use :Git or :G to run git commands
+" it has several improvements over plain old :!git
+Plug 'tpope/vim-fugitive'
+" provides folding for markdown and synthax highlighting
 Plug 'plasticboy/vim-markdown'
+" file explorer
+Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'SirVer/ultisnips'
+" show indentation guides
 Plug 'thaerkh/vim-indentguides'
+" autoinserts, edits and removes surroundings: parentheses, quotes, ...
 Plug 'tpope/vim-surround'
+" comment/uncomment text
 Plug 'tomtom/tcomment_vim'
+" autoformat markdown tables
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'junegunn/goyo.vim'
+" autoclose quotes and parentheses
 Plug 'Raimondi/delimitMate'
+" for latex: autocompletion, forward search, and more
 Plug 'lervag/vimtex'
-
-" general code completers
+" general code completer for many languages
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all'}
-Plug 'w0rp/ale' " this controls the linting in python and other languages
-                " it implements black, autopep8, pyflakes and others
-                " see the configuration part
-
-" python stuff
-"Plug 'psf/black', { 'tag': '19.10b0' } " provided by ale
+" this controls the linting in python and other languages
+" it implements black, autopep8, pyflakes and others
+" see the configuration part
+Plug 'w0rp/ale' 
+" proper folding for python, use normal vim commands
 Plug 'tmhedberg/SimpylFold'
-Plug 'vim-scripts/indentpython.vim'
+" shows synthax errors in many languages
 Plug 'vim-syntastic/syntastic'
-"Plug 'davidhalter/jedi-vim' " provided by YCM
-
-" colorschemes
-Plug 'morhetz/gruvbox'	"color scheme
+" colorscheme
 Plug 'tomasr/molokai'
-Plug 'sjl/badwolf'
-Plug 'gosukiwi/vim-atom-dark'
-Plug 'altercation/vim-colors-solarized'
-Plug 'tomasr/molokai'
-
-" All of your Plugins must be added before the following line
 call plug#end()
 
 " GENERAL SETTINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
-filetype on
-filetype plugin indent on
-syntax enable
-syntax on
-set nospell
-set encoding=utf-8
-set hlsearch
-" needed when conda is active
-let g:python3_host_prog = '/usr/bin/python'
-" set system clipboard
-set clipboard+=unnamedplus
+" use zsh and load .zshrc (-i option)
+set shell=zsh\ -i
+" needed when conda is active for packages to work
+" If you have python problems with packages install with pynvim pip (and pip2)
+let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/bin/python2'
+" use the system clipboard
+set clipboard=unnamedplus
 " activate mouse
 set mouse=a
-" set cwd to the one open
-set autochdir
 " hide the --INSERT-- and other status (since it is shown by airline)
-set noshowmode 
-" enable autocompletion
-set wildmode=longest,list,full
-" disable autocommenting on new line (fo=formatoptions)
-autocmd FileType * setlocal fo-=c fo-=r fo-=o fo+=l
-" open split on the right or bottom by default
-set splitbelow splitright
+set noshowmode
 " Show special characters
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set list
-" shows the current row and coloumn
-set ruler
 " do not show indentation like if it is code
-let g:indentguides_ignorelist = ['markdown']
-" fold according to the syntax of the language
-set foldmethod=syntax
-" but do not fold by default
-set nofoldenable
-" show line number column
-"set number relativenumber
-" show absolute numbers in insert mode
-"augroup numbertoggle
-"  autocmd!
-"  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-"  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-"augroup END
+let g:indentguides_ignorelist = ['markdown','txt']
+" enable powerline fonts in airline
+let g:airline_powerline_fonts = 1
+" exclude the annoying <:> autocompletion
+let delimitMate_matchpairs = "(:),[:],{:}"
 
 " APPEARANCE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -101,8 +76,6 @@ colorscheme molokai
 " Since I am using termguicolors, I need to declare colors for gui not cterm!
 " Disable background to use transparency in terminal
 highlight Normal guibg=none
-
-
 
 " SHORTCUTS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -121,40 +94,12 @@ map <C-p> "+P
 " for removing search highlight by hitting ESC
 nnoremap <esc> :noh<return><esc>
 
-" AIRLINE
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_powerline_fonts = 1
-let g:airline_theme= "minimalist"
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-" airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-
 " FILE-SEPCIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " .py
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
+" set virtualenv for ycm
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -164,9 +109,10 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix |
     \ set colorcolumn=80
-let g:SimpylFold_docstring_preview=1
 let g:ycm_autoclose_preview_window_after_completion=1
+" jump to the definition of a variable or to its declaration
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" which fixer to use from w0rp/ale
 let g:ale_fixers = {
   \   'python': [
   \       'add_blank_lines_for_python_control_statements',
@@ -182,8 +128,6 @@ let g:ale_fixers = {
   \}
 let g:ale_fix_on_save = 1
 let g:ale_python_black_options = '--line-length=79'
-" python linting for pymode
-let g:pymode_options_max_line_length = 88
 
 " .tex
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -204,7 +148,6 @@ au FileType tex,bib let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:
 
 " .md
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-" config for vim-markdown
 let g:vim_markdown_math = 1
 let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_auto_insert_bullets = 0
