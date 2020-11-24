@@ -5,7 +5,7 @@ The files are symlinked to the correct location in my system.
 I am using this repo mainly as a backup.
 
 # To Do
-* Set up the desktop widget conky
+* Set up the desktop widget conky (and possibly remove stuff from polybar)
 * When logging in there is a second of lag before the wallpaper is set, and an ugly solid grey background is shown
 
 # Notes to Myself
