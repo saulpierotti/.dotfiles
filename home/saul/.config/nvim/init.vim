@@ -96,12 +96,11 @@ map <C-p> "+P
 nnoremap <esc> :noh<return><esc>
 nnoremap <leader>t :terminal<CR>
 
-" FILE-SEPCIFIC CONF
+" FILETYPE-SEPCIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " .py
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-" set virtualenv for ycm
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
