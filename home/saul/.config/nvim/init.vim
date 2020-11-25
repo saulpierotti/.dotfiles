@@ -39,14 +39,14 @@ Plug 'w0rp/ale'
 Plug 'tmhedberg/SimpylFold'
 " shows synthax errors in many languages
 Plug 'vim-syntastic/syntastic'
+" change conda env from vim
+Plug 'cjrh/vim-conda'
 " colorscheme
 Plug 'tomasr/molokai'
 call plug#end()
 
 " GENERAL SETTINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" use zsh and load .zshrc (-i option)
-set shell=zsh\ -i
 " needed when conda is active for packages to work
 " If you have python problems with packages install with pynvim pip (and pip2)
 let g:python3_host_prog = '/usr/bin/python3'
@@ -90,9 +90,11 @@ nnoremap <leader>c : !compiler.sh %:p<CR>
 nnoremap <leader>p : !show_output.sh %:p<CR><CR>
 " configure cross-program copy-paste
 vnoremap <C-c> "+y
+" cannot use C-v for paste since it is used for visual selection
 map <C-p> "+P
 " for removing search highlight by hitting ESC
 nnoremap <esc> :noh<return><esc>
+nnoremap <leader>t :terminal<CR>
 
 " FILE-SEPCIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

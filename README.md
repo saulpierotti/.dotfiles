@@ -40,6 +40,8 @@ I am using this repo mainly as a backup.
 
 ## Login Manager
 * I am using LightDM with the webkit2 `lightdm-webkit-theme-litarvan` theme
+
+### LightDM
 * The user avatar and name (Saul Pierotti, not the user name) are better managed from the gnome settings panel (login to gnome!)
 	* For some reason when I change the picture manually it does not work
 
@@ -50,13 +52,27 @@ I am using this repo mainly as a backup.
 * The wallpaper is set by feh in `~/.xsession`
 	* Note: it has to have executable permissions!
 
+## File Browser
+### Ranger
+
+
 ## Text Editor
 * I use nvim
+
+### Nvim
 * I disabled the background color so to use the terminal background with `highlight Normal ctermbg=none`
 	* This must be after the theme declaration to be effective
+* I use the plugin `cjrh/vim-conda` for changing conda environments inside vim
+	* This plugin requires condainit to be sourced in the shell that calls nvim
+	* When calling vim from the command line this is not a problem
+	* When opening vim from ranger (just opening a file) .zshrc is not sourced and so it does not work
+		* This is a problem only if ranger is started as a desktop app and not from command line
+		* To overcome this, I source condainit before opening ranger as a desktop app (see ranger section)
 
 ## Terminal
 * I use kitty since it supports fonts with ligatures (I use Fira Code) and it is GPU-accellerated
+
+### Kitty
 * I changed `$TERM` (in .zshevnv) from `xterm-kitty` to `xterm-256color` so that colors are shown in ssh sessions
 * I did not set zsh autocompletion for kitty in `.zshrc` since I am using zsh-completions with antigen
 
