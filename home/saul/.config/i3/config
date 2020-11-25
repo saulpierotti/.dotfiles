@@ -106,6 +106,8 @@ exec --no-startup-id light-locker --late-locking --lock-after-screensaver=10
 exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 # Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
+# desktop widget
+exec --no-startup-id conky -d &
 
 # ---------------------------- TRAY --------------------------
 # gpu manager (switch nvidia/intel)
