@@ -26,7 +26,7 @@ fi
 raw_out_len=${#raw_out}
 substr_lenght=$(($raw_out_len-$spacer_len))
 
-if [ $substr_lenght > 0 ]; then
+if [ $substr_lenght -gt 0 ]; then
     out=${raw_out::$substr_lenght}
     echo "$out"
 fi
