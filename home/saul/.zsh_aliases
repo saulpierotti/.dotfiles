@@ -18,7 +18,7 @@ alias py="python"
 alias rmt="trash-put"
 
 # for kitty
-alias ssh="kitty_ssh.sh"
+alias ssh="TERM='xterm-256color' ssh $@"
 
 # commot tasks wrappers
 alias remove_orphan_packages='pacman -Qttdq | pacman -Rns -'

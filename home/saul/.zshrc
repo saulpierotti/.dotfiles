@@ -16,10 +16,8 @@ antigen bundle command-not-found
 # Tell Antigen that you're done.
 antigen apply
 
-# conda configs -----------------------------------------------------
+# enable conda
 source /home/saul/.condainit
-
-# Manual configs------------------------------------------------------------------------------------
 
 # Load my aliases
 source /home/saul/.zsh_aliases
