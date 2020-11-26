@@ -108,6 +108,10 @@ exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 # desktop widget
 exec --no-startup-id conky -d &
+# launches prime-offload when needed by optimus-manager
+# this is needed since optimus-manager does not run prime-offload after screen unlock
+# by forcing a reload of i3 I can run prime-offload
+exec_always --no-startup-id prime_offload_hack.sh &
 
 # ---------------------------- TRAY --------------------------
 # gpu manager (switch nvidia/intel)

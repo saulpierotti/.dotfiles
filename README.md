@@ -22,7 +22,7 @@ I am using this repo mainly as a backup and documentation of my configuration.
 	* Switching between GPUs and to hybrid mode works
 	* In Nvidia mode TTY changes are not recommended and can result in freezes (but seems to work using the `xf86-video-intel` driver and setting intel mode instead of modesetting in optimus-manager-qt)
 	* When resuming from a lock screen in nvidia or hybrid mode, the script Xorg post-start hook `/sbin/prime-offload` is not called
-		* Call it manually when needed (`prime-offload`)
+		* Call it manually when needed (`prime-offload`) or reload i3 (I put prime_offload_hack.sh as an exec_always)
 		* It is needed when I see a really long string in conky
 * For Nvidia I use the `nvidia-dkms` driver (since I am using the linux-zen kernel)
 
