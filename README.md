@@ -5,6 +5,7 @@ The files are symlinked to the correct location in my system.
 I am using this repo mainly as a backup and documentation of my configuration.
 
 # TODO
+* When restarting with redshift on, at reboot redshift is off but the indicator on polybar shows that it is on
 
 # Notes to Myself
 
