@@ -5,7 +5,6 @@ The files are symlinked to the correct location in my system.
 I am using this repo mainly as a backup and documentation of my configuration.
 
 # TODO
-* Set up the desktop widget conky
 
 # Notes to Myself
 
@@ -19,8 +18,10 @@ I am using this repo mainly as a backup and documentation of my configuration.
 
 ## GPU
 * For managing the Nvidia and Intel GPUs, I am using Optimus Manager
-	* Switching between GPUs and to hybrid mode works (sometimes you need to switch 2 times for it to be effective)
-	* In Nvidia mode TTY changes are not recommended and can result in freezes
+	* Switching between GPUs and to hybrid mode works
+	* In Nvidia mode TTY changes are not recommended and can result in freezes (but seems to work using the `xf86-video-intel` driver and setting intel mode instead of modesetting in optimus-manager-qt)
+	* When resuming from a lock screen in nvidia or hybrid mode, the script `/sbin/prime-offload` is not called
+		* Call it manually or reload i3 (I put the script as exec_always)
 * For Nvidia I use the `nvidia-dkms` driver (since I am using the linux-zen kernel)
 
 ## Lock Screen and Screensaver
