@@ -108,7 +108,6 @@ exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 # desktop widget
 exec --no-startup-id conky -d &
-exec_always --no-startup-id /sbin/prime-offload &
 
 # ---------------------------- TRAY --------------------------
 # gpu manager (switch nvidia/intel)

@@ -21,8 +21,9 @@ I am using this repo mainly as a backup and documentation of my configuration.
 * For managing the Nvidia and Intel GPUs, I am using Optimus Manager
 	* Switching between GPUs and to hybrid mode works
 	* In Nvidia mode TTY changes are not recommended and can result in freezes (but seems to work using the `xf86-video-intel` driver and setting intel mode instead of modesetting in optimus-manager-qt)
-	* When resuming from a lock screen in nvidia or hybrid mode, the script `/sbin/prime-offload` is not called
-		* Call it manually or reload i3 (I put the script as exec_always)
+	* When resuming from a lock screen in nvidia or hybrid mode, the script Xorg post-start hook `/sbin/prime-offload` is not called
+		* Call it manually if needed (`prime-offload`)
+		* I put it in execution in the conky config (`${exec prime-offload}`) before any call to `optimus-prime` so that it will auto-correct itself (it is silent so should not cause problems)
 * For Nvidia I use the `nvidia-dkms` driver (since I am using the linux-zen kernel)
 
 ## Lock Screen and Screensaver
