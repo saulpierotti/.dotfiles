@@ -9,31 +9,25 @@ changeMode() {
   echo $REDSHIFT
 }
 
-# changeTemp() {
-#   if [ "$2" -gt 1000 ] && [ "$2" -lt 25000 ] && [ "$REDSHIFT" = on ]
-#   then
-#     sed -i "s/REDSHIFT_TEMP=$1/REDSHIFT_TEMP=$2/g" $envFile 
-#     redshift -P -O $((REDSHIFT_TEMP+changeValue))
-#   fi
-# }
+restoreMode() {
+  sed -i "s/REDSHIFT_RESTORE=$1/REDSHIFT_RESTORE=$2/g" $envFile 
+  REDSHIFT=$2
+  echo $REDSHIFT
+}
 
 case $1 in 
   toggle) 
     if [ "$REDSHIFT" = on ];
     then
-      changeMode "$REDSHIFT" off
+      changeMode on off
+      restoreMode no yes
       redshift -x
     else
-      changeMode "$REDSHIFT" on
+      changeMode off on
+      restoreMode no yes
       redshift -O 3600
     fi
     ;;
-#  increase)
-#    changeTemp $((REDSHIFT_TEMP)) $((REDSHIFT_TEMP+changeValue))
-#    ;;
-#  decrease)
-#    changeTemp $((REDSHIFT_TEMP)) $((REDSHIFT_TEMP-changeValue));
-#    ;;
   status)
     case $REDSHIFT in
       on)
@@ -41,6 +35,19 @@ case $1 in
         ;;
       off)
         printf ""
+        ;;
+    esac
+    ;;
+  restore)
+    case $REDSHIFT in
+      on)
+        if [ "$REDSHIFT_RESTORE" = yes ]; then
+            restoreMode yes no
+            redshift -O 3600
+	fi
+        ;;
+      off)
+        redshift -x
         ;;
     esac
     ;;
