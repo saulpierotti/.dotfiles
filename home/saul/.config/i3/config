@@ -113,7 +113,7 @@ exec --no-startup-id conky -d &
 # by forcing a reload of i3 I can run prime-offload
 exec_always --no-startup-id prime_offload_hack.sh &
 # reset the status of redshift from the last login
-exec --no-startup-id source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh restore
+exec_always --no-startup-id source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh restore
 
 # ---------------------------- TRAY --------------------------
 # gpu manager (switch nvidia/intel)

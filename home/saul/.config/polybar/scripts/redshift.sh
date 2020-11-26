@@ -9,22 +9,14 @@ changeMode() {
   echo $REDSHIFT
 }
 
-restoreMode() {
-  sed -i "s/REDSHIFT_RESTORE=$1/REDSHIFT_RESTORE=$2/g" $envFile 
-  REDSHIFT=$2
-  echo $REDSHIFT
-}
-
 case $1 in 
   toggle) 
     if [ "$REDSHIFT" = on ];
     then
       changeMode on off
-      restoreMode no yes
       redshift -x
     else
       changeMode off on
-      restoreMode no yes
       redshift -O 3600
     fi
     ;;
@@ -39,16 +31,14 @@ case $1 in
     esac
     ;;
   restore)
-    case $REDSHIFT in
-      on)
-        if [ "$REDSHIFT_RESTORE" = yes ]; then
-            restoreMode yes no
-            redshift -O 3600
-	fi
-        ;;
-      off)
-        redshift -x
-        ;;
-    esac
+    if [ "$REDSHIFT" = on ];
+    then
+      redshift -x
+      changeMode off on
+      redshift -O 3600
+    else
+      changeMode on off
+      redshift -x
+    fi
     ;;
 esac
