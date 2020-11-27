@@ -43,6 +43,10 @@ I am using this repo mainly as a backup and documentation of my configuration.
 
 ## Login Manager
 * I am using LightDM
+* If stuck in a login loop (password is accepted but then LighDM comes again)
+	* Usually there is some error in .profile, .zshrc, .zshenv, or similar file read at login
+	* If not, it can be a permission problem on such files
+	* If not, it can be a permission problem on the folder /tmp
 
 ### LightDM
 * I am using the webkit2 `lightdm-webkit-theme-litarvan` theme

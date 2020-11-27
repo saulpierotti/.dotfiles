@@ -19,7 +19,7 @@ alias rmt="trash-put"
 
 # for kitty, since xterm-kitty is not widespread
 # and causes colorless prompts
-alias ssh="TERM='xterm-256color' ssh $@"
+alias ssh=kitty-ssh.sh
 
 # commot tasks wrappers
 alias remove_orphan_packages='pacman -Qttdq | pacman -Rns -'
