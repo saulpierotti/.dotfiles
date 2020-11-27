@@ -1,1 +1,1 @@
-export REDSHIFT=on
+export REDSHIFT=off
