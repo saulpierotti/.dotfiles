@@ -41,6 +41,8 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'vim-syntastic/syntastic'
 " change conda env from vim
 Plug 'cjrh/vim-conda'
+" Use jk or kj to escape instead of the hard to reach <Esc>
+Plug 'zhou13/vim-easyescape'
 " colorscheme
 Plug 'tomasr/molokai'
 call plug#end()
@@ -95,6 +97,11 @@ map <C-p> "+P
 " for removing search highlight by hitting ESC
 nnoremap <esc> :noh<return><esc>
 nnoremap <leader>t :terminal<CR>
+" Configuration for zhou13/vim-easyescap/
+let g:easyescape_chars = { "j": 1, "k": 1 }
+let g:easyescape_timeout = 100
+cnoremap jk <ESC>
+cnoremap kj <ESC>
 
 " FILETYPE-SEPCIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
