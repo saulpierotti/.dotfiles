@@ -44,3 +44,6 @@ bindkey -s '^[^o' 'source ranger_launcher_sudo.sh\n'
 
 # open nautilus in working dir
 bindkey -s '^f' 'nautilus .&; disown\n'
+
+# disable git plugins in the sshfs mount folder for performance reasons
+zstyle ':vcs_info:*' disable-patterns "$HOME/sshfs_mountpoint(|/*)"

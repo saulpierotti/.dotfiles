@@ -49,6 +49,8 @@ call plug#end()
 
 " GENERAL SETTINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" read .zshrc and aliases
+set shell=zsh\ -i
 " needed when conda is active for packages to work
 " If you have python problems with packages install with pynvim pip (and pip2)
 let g:python3_host_prog = '/usr/bin/python3'
@@ -99,7 +101,7 @@ nnoremap <esc> :noh<return><esc>
 nnoremap <leader>t :terminal<CR>
 " Configuration for zhou13/vim-easyescap/
 let g:easyescape_chars = { "j": 1, "k": 1 }
-let g:easyescape_timeout = 100
+let g:easyescape_timeout = 500
 cnoremap jk <ESC>
 cnoremap kj <ESC>
 
@@ -161,3 +163,15 @@ let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_auto_insert_bullets = 0
 au FileType markdown let b:delimitMate_quotes = "\" ' ` $"
 au FileType markdown let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
+
+
+" FOLDER-SPECIFIC CONF
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Disable ALE and synthastic in sshfs mount for performance reasons (I can call It manually)
+au BufNewFile,BufRead *sshfs_mountpoint/*
+    \ let g:ale_fix_on_save = 0 |
+    \ let g:ale_lint_on_text_changed = 0 |
+    \ let g:ale_lint_on_enter = 0 |
+    \ let g:syntastic_python_checkers = [''] |
+    \ let g:syntastic_check_on_open = 0 |
+    \ let g:syntastic_check_on_wq = 0 |
