@@ -43,7 +43,7 @@ Plug 'cjrh/vim-conda'
 Plug 'zhou13/vim-easyescape'
 " replace, for instance, \pi with the actual charachter
 Plug 'khzaw/vim-conceal' " for python
-Plug   'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
+Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 " markdown concealing is managed by vim-markdown
 " colorscheme
 Plug 'tomasr/molokai'
@@ -66,8 +66,16 @@ set noshowmode
 " Show special characters
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set list
-" do not show indentation like if it is code
-let g:indentguides_ignorelist = ['markdown','txt']
+" the encoding for special chars
+set fileformat=unix
+" auto-indent after enter
+set autoindent
+" the level of conceling of text, see :help conceallevel for more details
+set conceallevel=2
+" show a vertical colored column to mark position 80
+set colorcolumn=80
+" indent settings matches tab setting
+set smartindent
 " enable powerline fonts in airline
 let g:airline_powerline_fonts = 1
 " exclude the annoying <:> autocompletion
@@ -89,6 +97,13 @@ let g:ale_fixers = {
     \       'remove_trailing_lines',
     \       'trim_whitespace',
     \   ],
+    \   'markdown': [
+    \       'prettier',
+    \       'remark-lint',
+    \       'textlint',
+    \       'remove_trailing_lines',
+    \       'trim_whitespace',
+    \   ],
     \   'sh': [
     \       'shfmt',
     \       'remove_trailing_lines',
@@ -100,8 +115,6 @@ let g:ale_fix_on_save = 1
 " jump to the definition of a variable or to its declaration
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
-" the level of conceling of text, see :help conceallevel for more details
-set conceallevel=2
 
 " APPEARANCE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -114,6 +127,7 @@ colorscheme molokai
 highlight Normal guibg=none
 " hide background in concealed text and change its color
 highlight Conceal guibg=none guifg=cyan
+
 " SHORTCUTS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set the leader charachter to space
@@ -144,41 +158,27 @@ cnoremap kj <ESC>
 " vim files
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType vim
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
     \ set shiftwidth=4 |
     \ set textwidth=79 |
     \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix |
-    \ set colorcolumn=80 |
     \ let b:delimitMate_quotes = "' ` $" |
-    \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
+    \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)' |
 
 " shell scripts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType sh,bash,zsh
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
     \ set shiftwidth=4 |
     \ set textwidth=79 |
     \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix |
-    \ set colorcolumn=80
+    \ set colorcolumn=80 |
 
 " python scripts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_python_black_options = '--line-length=79'
 autocmd FileType python
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
     \ set shiftwidth=4 |
     \ set textwidth=79 |
     \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix |
-    \ set colorcolumn=80
 
 " latex and biblatex
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -196,7 +196,7 @@ autocmd VimLeave *.tex !texclear.sh %
 autocmd FileType tex nmap <Leader>f :call SyncTexForward()<CR>
 autocmd FileType tex,bib
     \ let b:delimitMate_quotes = "\" ' ` $" |
-    \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
+    \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)' |
 
 " markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -213,9 +213,10 @@ let g:vim_markdown_frontmatter = 1
 " ~~this text~~ will be striked through
 let g:vim_markdown_strikethrough = 1
 autocmd FileType markdown
+    \ set shiftwidth=2 |
+    \ set expandtab |
     \ let b:delimitMate_quotes = "\" ' ` $" |
     \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)' |
-
 
 " FOLDER-SPECIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
