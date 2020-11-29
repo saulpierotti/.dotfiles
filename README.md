@@ -4,6 +4,14 @@ This repo contains some of my config files for ArchLinux on Acer Aspire 5.
 The files are symlinked to the correct location in my system.
 I am using this repo mainly as a backup and documentation of my configuration.
 
+## How To Use
+
+- My scripts are available on Github at `saulpierotti/.scripts`
+- Use `to_dotfiles.sh filename` to copy a file to this repo and replace it with a symlink in the original location
+- For consistency, I always symlink files and never folders
+- The script `restore_dotfiles.sh` takes all the files in the folder and replaces the original file locations with symlinks to them
+  - ATTENTION: this overwrites the files in the system
+
 # TODO
 
 # Notes to Myself
