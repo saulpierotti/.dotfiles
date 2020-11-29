@@ -1,8 +1,10 @@
 # Saul Dotfiles
 
 This repo contains some of my config files for ArchLinux on Acer Aspire 5.
-The files are symlinked to the correct location in my system.
+The files in root/ are symlinked to the correct location in my system.
 I am using this repo mainly as a backup and documentation of my configuration.
+`fstab` does not work when symlinked so it must be copied and kept track of manually.
+The folder installed_packages is an update list of ll the packages present on my system.
 
 ## How To Use
 
