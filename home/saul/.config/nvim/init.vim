@@ -149,8 +149,8 @@ let g:easyescape_chars = { "j": 1, "k": 1 }
 let g:easyescape_timeout = 500
 cnoremap jk <ESC>
 cnoremap kj <ESC>
-" save in insert mode without exiting
-inoremap <silent> <C-S>         <C-O>:update<CR>
+" call the gitup alias (see .zsh_aliases)
+nnoremap <C-G> <C-O>:!gitup<CR>
 
 " FILETYPE-SEPCIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -215,6 +215,8 @@ autocmd FileType markdown set expandtab
 autocmd FileType markdown set noautoindent
 autocmd FileType markdown let b:delimitMate_quotes = "\" ' ` $"
 autocmd FileType markdown let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
+" save easily in insert mode
+autocmd FileType markdown inoremap <C-S> <C-O>:w<CR>
 
 " FOLDER-SPECIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
