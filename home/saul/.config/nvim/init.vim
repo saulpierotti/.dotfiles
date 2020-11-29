@@ -72,8 +72,6 @@ set fileformat=unix
 set autoindent
 " the level of conceling of text, see :help conceallevel for more details
 set conceallevel=2
-" show a vertical colored column to mark position 80
-set colorcolumn=80
 " indent settings matches tab setting
 set smartindent
 " enable powerline fonts in airline
@@ -163,6 +161,7 @@ autocmd FileType vim
     \ set expandtab |
     \ let b:delimitMate_quotes = "' ` $" |
     \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)' |
+    \ set colorcolumn=80 |
 
 " shell scripts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -179,6 +178,7 @@ autocmd FileType python
     \ set shiftwidth=4 |
     \ set textwidth=79 |
     \ set expandtab |
+    \ set colorcolumn=80 |
 
 " latex and biblatex
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -215,6 +215,7 @@ let g:vim_markdown_strikethrough = 1
 autocmd FileType markdown
     \ set shiftwidth=2 |
     \ set expandtab |
+    \ set noautoindent |
     \ let b:delimitMate_quotes = "\" ' ` $" |
     \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)' |
 
