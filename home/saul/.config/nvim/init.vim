@@ -149,6 +149,8 @@ let g:easyescape_chars = { "j": 1, "k": 1 }
 let g:easyescape_timeout = 500
 cnoremap jk <ESC>
 cnoremap kj <ESC>
+" save in insert mode without exiting
+inoremap <silent> <C-S>         <C-O>:update<CR>
 
 " FILETYPE-SEPCIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
