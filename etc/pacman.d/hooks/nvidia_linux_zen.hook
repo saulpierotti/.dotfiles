@@ -1,3 +1,4 @@
+# automatically rebuild the initial ramdisk after an update of the kernel or nvidia drivers
 [Trigger]
 Operation=Install
 Operation=Upgrade
@@ -5,7 +6,6 @@ Operation=Remove
 Type=Package
 Target=nvidia-dkms
 Target=linux-zen
-# Change the linux part above and in the Exec line if a different kernel is used
 
 [Action]
 Description=Update Nvidia module in initcpio
