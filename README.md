@@ -116,3 +116,6 @@ I am using this repo mainly as a backup and documentation of my configuration.
 
 ## Media
 * I use mpv for videos with some configuration to improve quality at a performance cost (in `~/.config/mpv/mpv.conf`)
+
+## NordVPN
+* Do not sync the config file since it contains an access token
