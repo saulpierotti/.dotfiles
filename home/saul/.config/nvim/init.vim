@@ -140,7 +140,7 @@ nnoremap <leader>p : !show_output.sh %:p<CR><CR>
 " configure cross-program copy-paste
 vnoremap <C-c> "+y
 " cannot use C-v for paste since it is used for visual selection
-map <C-p> "+P
+noremap <C-p> "+P
 " for removing search highlight by hitting ESC
 nnoremap <esc> :noh<return><esc>
 nnoremap <leader>t :terminal<CR>
@@ -155,30 +155,27 @@ cnoremap kj <ESC>
 
 " vim files
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType vim
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ let b:delimitMate_quotes = "' ` $" |
-    \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)' |
-    \ set colorcolumn=80 |
+autocmd FileType vim set shiftwidth=4
+autocmd FileType vim set textwidth=79
+autocmd FileType vim set expandtab
+autocmd FileType vim set colorcolumn=80
+autocmd FileType vim let b:delimitMate_quotes = "' ` $"
+autocmd FileType vim let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
 " shell scripts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType sh,bash,zsh
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set colorcolumn=80 |
+autocmd FileType sh,bash,zsh set shiftwidth=4
+autocmd FileType sh,bash,zsh set textwidth=79
+autocmd FileType sh,bash,zsh set expandtab
+autocmd FileType sh,bash,zsh set colorcolumn=80
 
 " python scripts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_python_black_options = '--line-length=79'
-autocmd FileType python
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set colorcolumn=80 |
+autocmd FileType python set shiftwidth=4
+autocmd FileType python set textwidth=79
+autocmd FileType python set expandtab
+autocmd FileType python set colorcolumn=80
 
 " latex and biblatex
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -194,9 +191,8 @@ let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
 autocmd VimLeave *.tex !texclear.sh %
 autocmd FileType tex nmap <Leader>f :call SyncTexForward()<CR>
-autocmd FileType tex,bib
-    \ let b:delimitMate_quotes = "\" ' ` $" |
-    \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)' |
+autocmd FileType tex,bib let b:delimitMate_quotes = "\" ' ` $"
+autocmd FileType tex,bib let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
 " markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -212,18 +208,16 @@ let g:vim_markdown_auto_insert_bullets = 1
 let g:vim_markdown_frontmatter = 1
 " ~~this text~~ will be striked through
 let g:vim_markdown_strikethrough = 1
-autocmd FileType markdown
-    \ set shiftwidth=2 |
-    \ set expandtab |
-    \ set noautoindent |
-    \ let b:delimitMate_quotes = "\" ' ` $" |
-    \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)' |
+autocmd FileType markdown set shiftwidth=2
+autocmd FileType markdown set expandtab
+autocmd FileType markdown set noautoindent
+autocmd FileType markdown let b:delimitMate_quotes = "\" ' ` $"
+autocmd FileType markdown let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
 " FOLDER-SPECIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Disable ALE and in sshfs mount for performance reasons (I can call It manually)
-autocmd BufNewFile,BufRead *sshfs_mountpoint/*
-    \ let g:ale_fix_on_save = 0 |
-    \ let g:ale_lint_on_text_changed = 0 |
-    \ let g:ale_lint_on_enter = 0 |
+autocmd BufNewFile,BufRead *sshfs_mountpoint/* let g:ale_fix_on_save = 0
+autocmd BufNewFile,BufRead *sshfs_mountpoint/* let g:ale_lint_on_text_changed = 0
+autocmd BufNewFile,BufRead *sshfs_mountpoint/* let g:ale_lint_on_enter = 0
