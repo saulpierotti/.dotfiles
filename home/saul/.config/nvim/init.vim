@@ -41,6 +41,10 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'cjrh/vim-conda'
 " Use jk or kj to escape instead of the hard to reach <Esc>
 Plug 'zhou13/vim-easyescape'
+" replace, for instance, \pi with the actual charachter
+Plug 'khzaw/vim-conceal' " for python
+Plug   'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
+" markdown concealing is managed by vim-markdown
 " colorscheme
 Plug 'tomasr/molokai'
 call plug#end()
@@ -96,6 +100,8 @@ let g:ale_fix_on_save = 1
 " jump to the definition of a variable or to its declaration
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
+" the level of conceling of text, see :help conceallevel for more details
+set conceallevel=2
 
 " APPEARANCE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -106,7 +112,8 @@ colorscheme molokai
 " Since I am using termguicolors, I need to declare colors for gui not cterm!
 " Disable background to use transparency in terminal
 highlight Normal guibg=none
-
+" hide background in concealed text and change its color
+highlight Conceal guibg=none guifg=cyan
 " SHORTCUTS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set the leader charachter to space
@@ -144,7 +151,9 @@ autocmd FileType vim
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
-    \ set colorcolumn=80
+    \ set colorcolumn=80 |
+    \ let b:delimitMate_quotes = "' ` $" |
+    \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
 " shell scripts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -189,11 +198,20 @@ autocmd FileType tex,bib
     \ let b:delimitMate_quotes = "\" ' ` $" |
     \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
-" .md
+" markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
+" disable conceal in math mode
+let g:tex_conceal = ""
+" highlight math mode appropriately
 let g:vim_markdown_math = 1
-let g:vim_markdown_new_list_item_indent = 0
-let g:vim_markdown_auto_insert_bullets = 0
+" auto-indent in bullet list
+let g:vim_markdown_new_list_item_indent = 1
+" put automatically bullets after enter
+let g:vim_markdown_auto_insert_bullets = 1
+" highlight the yaml preamble
+let g:vim_markdown_frontmatter = 1
+" ~~this text~~ will be striked through
+let g:vim_markdown_strikethrough = 1
 autocmd FileType markdown
     \ let b:delimitMate_quotes = "\" ' ` $" |
     \ let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)' |
