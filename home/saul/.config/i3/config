@@ -114,6 +114,8 @@ exec --no-startup-id conky -d &
 exec_always --no-startup-id prime_offload_hack.sh &
 # reset the status of redshift from the last login
 exec_always --no-startup-id source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh restore
+# remap the right menu key to the windows key, and disable the autorepeat (the xset part)
+exec --no-startup-id xmodmap -e 'keycode 135 = Super_R' && xset -r 135
 
 # ---------------------------- TRAY --------------------------
 # gpu manager (switch nvidia/intel)

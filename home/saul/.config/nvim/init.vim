@@ -215,8 +215,6 @@ autocmd FileType markdown set expandtab
 autocmd FileType markdown set noautoindent
 autocmd FileType markdown let b:delimitMate_quotes = "\" ' ` $"
 autocmd FileType markdown let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
-" save easily in insert mode
-autocmd FileType markdown inoremap <C-S> <C-O>:w<CR>
 
 " FOLDER-SPECIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
