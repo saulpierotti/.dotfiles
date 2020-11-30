@@ -109,6 +109,16 @@ The folder installed_packages is an update list of ll the packages present on my
   - When opening vim from ranger (just opening a file) .zshrc is not sourced and so it does not work
     - This is a problem only if ranger is started as a desktop app and not from command line
     - To overcome this, I source condainit before opening ranger as a desktop app (see ranger section)
+- I use the ALE plugin as a linter and fixer
+- I use Coc.nvim for autocompletion
+  - Coc can be configured at `.config/nvim/coc-settings.json`
+  - Coc plugins are used for enabling intellinsense in different languages, here is a list of what I use (install in vim with `:CocInstall`)
+    - `coc-pyright`
+      - I set the python path to the conda env that I use in the Coc conf file
+      - Must be hardcoded, does not work otherwise
+    - `coc-sh`
+    - `coc-json`
+  - Since I already use ALE for linting, I set up CoC to redirect linting messages to ALE in its config file (of Coc)
 
 ## Terminal
 

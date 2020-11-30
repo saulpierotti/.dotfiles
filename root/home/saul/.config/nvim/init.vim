@@ -40,7 +40,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale' 
 " proper folding for python, use normal vim commands
 Plug 'tmhedberg/SimpylFold'
-" change conda env from vim
+" change conda env from vim (does not work for Coc)
 Plug 'cjrh/vim-conda'
 " Use jk or kj to escape instead of the hard to reach <Esc>
 Plug 'zhou13/vim-easyescape'
