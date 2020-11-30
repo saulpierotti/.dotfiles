@@ -88,7 +88,6 @@ let g:ale_fixers = {
     \       'add_blank_lines_for_python_control_statements',
     \       'black',
     \       'isort',
-    \       'reorder-python-imports',
     \       'remove_trailing_lines',
     \       'trim_whitespace',
     \   ],
