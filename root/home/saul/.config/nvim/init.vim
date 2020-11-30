@@ -149,8 +149,6 @@ let g:easyescape_chars = { "j": 1, "k": 1 }
 let g:easyescape_timeout = 500
 cnoremap jk <ESC>
 cnoremap kj <ESC>
-" call the gitup alias (see .zsh_aliases)
-nnoremap <C-G> <C-O>:!gitup "from nvim" <CR>
 
 " FILETYPE-SEPCIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
