@@ -45,8 +45,8 @@ Plug 'cjrh/vim-conda'
 Plug 'zhou13/vim-easyescape'
 " replace, for instance, \pi with the actual charachter
 Plug 'khzaw/vim-conceal' " for python
-Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 " markdown concealing is managed by vim-markdown
+" tex concealing is managed by vimtex
 " colorscheme
 Plug 'tomasr/molokai'
 call plug#end()
@@ -95,6 +95,11 @@ let g:ale_fixers = {
     \   ],
     \   'markdown': [
     \       'prettier',
+    \       'remove_trailing_lines',
+    \       'trim_whitespace',
+    \   ],
+    \   'tex': [
+    \       'latexindent',
     \       'remove_trailing_lines',
     \       'trim_whitespace',
     \   ],
@@ -187,6 +192,7 @@ let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
 autocmd VimLeave *.tex !texclear.sh %
 autocmd FileType tex nmap <Leader>f :call SyncTexForward()<CR>
+autocmd FileType tex,bib set shiftwidth=4
 autocmd FileType tex,bib let b:delimitMate_quotes = "\" ' ` $"
 autocmd FileType tex,bib let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
