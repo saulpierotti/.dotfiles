@@ -86,12 +86,9 @@ let g:ale_echo_msg_format = '[ALE] [%linter%] %s [%severity%]'
 let g:ale_fixers = {
     \   'python': [
     \       'add_blank_lines_for_python_control_statements',
-    \       'autopep8',
     \       'black',
     \       'isort',
     \       'reorder-python-imports',
-    \       'isort',
-    \       'yapf',
     \       'remove_trailing_lines',
     \       'trim_whitespace',
     \   ],
