@@ -28,6 +28,8 @@ Plug 'dhruvasagar/vim-table-mode'
 " autoclose quotes and parentheses
 Plug 'Raimondi/delimitMate'
 " for latex: autocompletion, forward search, and more
+" this is a complete plugin that does not try to replace linters (ALE)
+" or to create an IDE
 Plug 'lervag/vimtex'
 " general code completer for many languages
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all'}
