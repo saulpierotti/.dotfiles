@@ -2,6 +2,9 @@
 " SAUL NVIM CONFIG
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" must be before plugins are loaded
+" I use Coc for LSP
+let g:ale_disable_lsp = 1
 
 " PLUGINS (vim plugged)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -31,12 +34,10 @@ Plug 'Raimondi/delimitMate'
 " this is a complete plugin that does not try to replace linters (ALE)
 " or to create an IDE
 Plug 'lervag/vimtex'
-" general code completer for many languages
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all'}
+" general code completer for many languages with intellisense
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " this controls the linting in python and other languages
-" it implements black, autopep8, pyflakes and others
-" see the configuration part
-Plug 'w0rp/ale' 
+Plug 'dense-analysis/ale' 
 " proper folding for python, use normal vim commands
 Plug 'tmhedberg/SimpylFold'
 " change conda env from vim
@@ -55,10 +56,6 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " read .zshrc and aliases
 set shell=zsh\ -i
-" needed when conda is active for packages to work
-" If you have python problems with packages install with pynvim pip (and pip2)
-let g:python3_host_prog = '/usr/bin/python3'
-let g:python_host_prog = '/usr/bin/python2'
 " use the system clipboard
 set clipboard=unnamedplus
 " activate mouse
@@ -80,10 +77,6 @@ set smartindent
 let g:airline_powerline_fonts = 1
 " exclude the annoying <:> autocompletion
 let delimitMate_matchpairs = "(:),[:],{:}"
-" Set this. Airline will handle the rest.
-let g:airline#extensions#ale#enabled = 1
-" I want to see where the error comes from
-let g:ale_echo_msg_format = '[ALE] [%linter%] %s [%severity%]'
 " Which fixers to use
 let g:ale_fixers = {
     \   'python': [
@@ -111,9 +104,10 @@ let g:ale_fixers = {
     \}
 " Run ALE fixers on save
 let g:ale_fix_on_save = 1
-" jump to the definition of a variable or to its declaration
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_autoclose_preview_window_after_completion=1
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
+" I want to see where the error comes from
+let g:ale_echo_msg_format = '[ALE] [%linter%] %s [%severity%]'
 
 " APPEARANCE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
