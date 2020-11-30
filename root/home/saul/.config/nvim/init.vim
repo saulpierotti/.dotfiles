@@ -94,7 +94,6 @@ let g:ale_fixers = {
     \   ],
     \   'markdown': [
     \       'prettier',
-    \       'textlint',
     \       'remove_trailing_lines',
     \       'trim_whitespace',
     \   ],
