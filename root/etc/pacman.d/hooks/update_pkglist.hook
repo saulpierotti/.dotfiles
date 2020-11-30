@@ -9,4 +9,4 @@ Target = *
 [Action]
 Description = Writing a new log files in ~/.pkg_history...
 When = PostTransaction
-Exec = /bin/sh -c "~saul/.scripts/list_pkgs.sh"
+Exec = /bin/su -s /bin/bash -c "~saul/.scripts/list_pkgs.sh" saul
