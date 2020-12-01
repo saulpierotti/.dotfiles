@@ -123,8 +123,10 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#coc#enabled = 1
 " I want to see where the error comes from
 let g:ale_echo_msg_format = '[ALE] [%linter%] %s [%severity%]'
+
 " Coc.nvim configurations (edited from the official github)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TextEdit might fail if hidden is not set.
@@ -324,6 +326,7 @@ function! CondaActivate()
     ALELint
 endfunction
 autocmd FileType python nnoremap ca :call CondaActivate()<CR><CR>
+
 
 " latex and biblatex
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
