@@ -33,6 +33,7 @@ Plug 'Raimondi/delimitMate'
 " for latex: autocompletion, forward search, and more
 " this is a complete plugin that does not try to replace linters (ALE)
 " or to create an IDE
+" There is also for Coc, but this works better
 Plug 'lervag/vimtex'
 " general code completer for many languages with intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -322,7 +323,8 @@ let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
 autocmd VimLeave *.tex !texclear.sh %
 autocmd FileType tex nmap <Leader>f :call SyncTexForward()<CR>
-autocmd FileType tex,bib set shiftwidth=4
+" to be same with the deafult linting
+autocmd FileType tex,bib set shiftwidth=8
 autocmd FileType tex,bib let b:delimitMate_quotes = "\" ' ` $"
 autocmd FileType tex,bib let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
