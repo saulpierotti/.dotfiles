@@ -210,6 +210,10 @@ autocmd FileType markdown set noautoindent
 autocmd FileType markdown let b:delimitMate_quotes = "\" ' ` $"
 autocmd FileType markdown let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
 
+" json
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType json set shiftwidth=4
+
 " FOLDER-SPECIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
