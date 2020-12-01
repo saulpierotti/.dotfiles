@@ -118,6 +118,7 @@ The folder installed_packages is an update list of ll the packages present on my
       - Must be hardcoded, does not work otherwise
     - `coc-sh`
     - `coc-json`
+    - `coc-texlab`
   - Since I already use ALE for linting, I set up CoC to redirect linting messages to ALE in its config file (of Coc)
 
 ## Terminal
@@ -163,3 +164,4 @@ The folder installed_packages is an update list of ll the packages present on my
 - I installed the texlive-most meta package
 - I edit in vim using the plugin vimtex, and ALE for linting
 - ALE uses latexindent, which is included in texlive-most, but misses the perl module `perl-log-dispatch` (in the AUR)
+- I use coc-texlab for completion
