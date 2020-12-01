@@ -109,6 +109,7 @@ let g:airline#extensions#ale#enabled = 1
 " I want to see where the error comes from
 let g:ale_echo_msg_format = '[ALE] [%linter%] %s [%severity%]'
 
+
 " APPEARANCE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable true colors in terminal
@@ -171,6 +172,18 @@ autocmd FileType python set shiftwidth=4
 autocmd FileType python set textwidth=79
 autocmd FileType python set expandtab
 autocmd FileType python set colorcolumn=80
+" change the conda environment in ALE and pyright (Coc python LSP)
+" NOTE: this works only once, if you want to change twice, close and open vim
+" again
+function! CondaActivate()
+" this is provided by vim-conda and works for ALE
+    CondaChangeEnv
+" set the first entry in $PATH (set by the previous command) to the Coc config file
+    !pyright_change_env.sh
+    ALEReset
+    ALELint
+endfunction
+autocmd FileType python nnoremap ca :call CondaActivate()<CR><CR>
 
 " latex and biblatex
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
