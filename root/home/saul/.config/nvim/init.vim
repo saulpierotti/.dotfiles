@@ -45,7 +45,7 @@ Plug 'plasticboy/vim-markdown'
 " for latex: forward search, syntax highlighting, and more
 " this is a complete plugin that does not try to replace linters (ALE)
 " or to create an IDE
-" There is also for Coc, but this works better
+" I installed also its Coc integration
 Plug 'lervag/vimtex'
 
 " this controls the linting in python and other languages
@@ -58,6 +58,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fannheyward/coc-pyright', {'do': 'yarn install --forzen-lockfile'}
 " Microsoft LSP for tex
 Plug 'fannheyward/coc-texlab', {'do': 'yarn install --forzen-lockfile'}
+" Integration for vimtex autocompletion
+Plug 'neoclide/coc-vimtex', {'do': 'yarn install --forzen-lockfile'}
 " provides bash-language-server
 Plug 'josa42/coc-sh', {'do': 'yarn install --forzen-lockfile'}
 " autocompletions for json settings in coc config
