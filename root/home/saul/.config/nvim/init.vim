@@ -1,4 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " SAUL NVIM CONFIG
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -15,8 +16,6 @@ Plug 'vim-airline/vim-airline-themes'
 " git wrapper, just use :Git or :G to run git commands
 " it has several improvements over plain old :!git
 Plug 'tpope/vim-fugitive'
-" provides folding for markdown and synthax highlighting
-Plug 'plasticboy/vim-markdown'
 " file explorer
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -30,15 +29,6 @@ Plug 'tomtom/tcomment_vim'
 Plug 'dhruvasagar/vim-table-mode'
 " autoclose quotes and parentheses
 Plug 'Raimondi/delimitMate'
-" for latex: autocompletion, forward search, and more
-" this is a complete plugin that does not try to replace linters (ALE)
-" or to create an IDE
-" There is also for Coc, but this works better
-Plug 'lervag/vimtex'
-" general code completer for many languages with intellisense
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" this controls the linting in python and other languages
-Plug 'dense-analysis/ale' 
 " proper folding for python, use normal vim commands
 Plug 'tmhedberg/SimpylFold'
 " change conda env from vim (does not work for Coc)
@@ -49,6 +39,30 @@ Plug 'zhou13/vim-easyescape'
 Plug 'khzaw/vim-conceal' " for python
 " markdown concealing is managed by vim-markdown
 " tex concealing is managed by vimtex
+
+" provides folding for markdown and synthax highlighting
+Plug 'plasticboy/vim-markdown'
+" for latex: forward search, syntax highlighting, and more
+" this is a complete plugin that does not try to replace linters (ALE)
+" or to create an IDE
+" There is also for Coc, but this works better
+Plug 'lervag/vimtex'
+
+" this controls the linting in python and other languages
+Plug 'dense-analysis/ale' 
+
+" general code completer for many languages with intellisense (with extensions)
+" plugin installation requires yarn
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Microsoft LSP for python
+Plug 'fannheyward/coc-pyright', {'do': 'yarn install --forzen-lockfile'}
+" Microsoft LSP for tex
+Plug 'fannheyward/coc-texlab', {'do': 'yarn install --forzen-lockfile'}
+" provides bash-language-server
+Plug 'josa42/coc-sh', {'do': 'yarn install --forzen-lockfile'}
+" autocompletions for json settings in coc config
+Plug 'neoclide/coc-json', {'do': 'yarn install --forzen-lockfile'}
+
 " colorscheme
 Plug 'tomasr/molokai'
 call plug#end()

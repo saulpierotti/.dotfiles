@@ -112,14 +112,13 @@ The folder installed_packages is an update list of ll the packages present on my
 - I use the ALE plugin as a linter and fixer
 - I use Coc.nvim for autocompletion
   - Coc can be configured at `.config/nvim/coc-settings.json`
-  - Coc plugins are used for enabling intellinsense in different languages, here is a list of what I use (install in vim with `:CocInstall`)
-    - `coc-pyright`
-      - I set the python path to the conda env that I use in the Coc conf file
-      - Must be hardcoded, does not work otherwise
-    - `coc-sh`
-    - `coc-json`
-    - `coc-texlab`
+  - Coc plugins are used for enabling intellinsense in different languages
+  - Extensions can be installed with `:CocInstall`, but I prefer using Plug on my `init.nvim`
+    - In order to install Coc extensions with Plug you need `yarn` (install with pacman)
+    - Add the post-update hook as `Plug 'neoclide/coc-json', {'do': 'yarn install --forzen-lockfile'}`
+    - Extensions installed with Plug cannt be removed with `:CocUnsinstall`
   - Since I already use ALE for linting, I set up CoC to redirect linting messages to ALE in its config file (of Coc)
+  - In general I am disabling the linting features of Coc since I prefer ALE for that
 
 ## Terminal
 
