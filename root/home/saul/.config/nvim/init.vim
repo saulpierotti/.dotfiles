@@ -108,8 +108,7 @@ let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
 " I want to see where the error comes from
 let g:ale_echo_msg_format = '[ALE] [%linter%] %s [%severity%]'
-
-" Coc.nvim configurations
+" Coc.nvim configurations (edited from the official github)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -179,7 +178,7 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
+    execute nh '.expand('<cword>')
   elseif (coc#rpc#ready())
     call CocActionAsync('doHover')
   else
@@ -242,44 +241,6 @@ if has('nvim')
   vnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#nvim_scroll(1, 1) : "\<C-f>"
   vnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#nvim_scroll(0, 1) : "\<C-b>"
 endif
-
-" Use CTRL-S for selections ranges.
-" Requires 'textDocument/selectionRange' support of language server.
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
-
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
-
-" Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" Mappings for CoCList
-" Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
 
 " APPEARANCE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -405,3 +366,5 @@ autocmd FileType json set shiftwidth=4
 autocmd BufNewFile,BufRead *sshfs_mountpoint/* let g:ale_fix_on_save = 0
 autocmd BufNewFile,BufRead *sshfs_mountpoint/* let g:ale_lint_on_text_changed = 0
 autocmd BufNewFile,BufRead *sshfs_mountpoint/* let g:ale_lint_on_enter = 0
+" Disable also Coc (note that must be b, not g)
+autocmd BufNewFile,BufRead *sshfs_mountpoint/* let b:coc_enabled = 0
