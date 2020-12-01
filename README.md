@@ -110,15 +110,25 @@ The folder installed_packages is an update list of ll the packages present on my
     - This is a problem only if ranger is started as a desktop app and not from command line
     - To overcome this, I source condainit before opening ranger as a desktop app (see ranger section)
 - I use the ALE plugin as a linter and fixer
+  - Conda environments in ALE can be changed from within vim with vim-conda (`:CondaChangeEnv`)
+  - I created the shortcut `ca` to change environment in that way and then call a script that configures the envirionment also for pyright (see Coc.nvim)
 - I use Coc.nvim for autocompletion
+  - Since I already use ALE for linting, I set up CoC to redirect linting messages to ALE in its config file (of Coc)
   - Coc can be configured at `.config/nvim/coc-settings.json`
   - Coc plugins are used for enabling intellinsense in different languages
   - Extensions can be installed with `:CocInstall`, but I prefer using Plug on my `init.nvim`
     - In order to install Coc extensions with Plug you need `yarn` (install with pacman)
     - Add the post-update hook as `Plug 'neoclide/coc-json', {'do': 'yarn install --forzen-lockfile'}`
     - Extensions installed with Plug cannt be removed with `:CocUnsinstall`
-  - Since I already use ALE for linting, I set up CoC to redirect linting messages to ALE in its config file (of Coc)
+  - For python I use coc-pyright (Microsoft LSP)
+    - It has problems with conda environments, and it does not see the env set by vim-conda
+    - It does not also recognise configuration files in the root of the project folder
+    - The only working way to set the path is to change `python.pythonPath` in the Coc configuration file
+    - I change its envirionment using the shortcut `ca`, that first calls vim-conda (so to set the env for ALE)
+      - After setting an env with vim-conda, it calls a script that overwrites the Coc config file
+      - It sets `python.pythonPath` to what is selected by vim-conda
   - In general I am disabling the linting features of Coc since I prefer ALE for that
+- It is better to avoid using vim within a conda environment for problems with vim-conda and Coc.nvim
 
 ## Terminal
 
