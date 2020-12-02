@@ -281,7 +281,7 @@ vnoremap <C-c> "+y
 noremap <C-p> "+P
 " for removing search highlight by hitting ESC
 nnoremap <esc> :noh<return><esc>
-nnoremap <leader>t :terminal<CR>
+nnoremap <leader>t :!$TERMCMD -d "%:p:h"&<CR><CR>
 " Configuration for zhou13/vim-easyescap/
 let g:easyescape_chars = { "j": 1, "k": 1 }
 let g:easyescape_timeout = 500
