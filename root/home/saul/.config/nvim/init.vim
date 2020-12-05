@@ -65,6 +65,9 @@ Plug 'josa42/coc-sh', {'do': 'yarn install --forzen-lockfile'}
 " autocompletions for json settings in coc config
 Plug 'neoclide/coc-json', {'do': 'yarn install --forzen-lockfile'}
 
+" Debugger for python, C, and other languages
+Plug 'puremourning/vimspector'
+
 " colorscheme
 Plug 'tomasr/molokai'
 call plug#end()
@@ -126,6 +129,47 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#coc#enabled = 1
 " I want to see where the error comes from
 let g:ale_echo_msg_format = '[ALE] [%linter%] %s [%severity%]'
+" enable standard vimspector mappings
+let g:vimspector_enable_mappings = 'HUMAN'
+
+" APPEARANCE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable true colors in terminal
+set termguicolors
+" sets theme
+colorscheme molokai
+" Since I am using termguicolors, I need to declare colors for gui not cterm!
+" Disable background to use transparency in terminal
+highlight Normal guibg=none
+" hide background in concealed text and change its color
+highlight Conceal guibg=none guifg=cyan
+
+" SHORTCUTS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set the leader charachter to space
+let mapleader =" "
+" for tabs
+nnoremap <C-h> :tabp<CR>
+nnoremap <C-l> :tabn<CR>
+nnoremap <Tab> :tabedit<Space>
+" call the complier script and show the output
+nnoremap <leader>c : !compiler.sh %:p<CR>
+nnoremap <leader>p : !show_output.sh %:p<CR><CR>
+nnoremap <leader>r : !$TERMCMD -e ranger &<CR>
+" configure cross-program copy-paste
+vnoremap <C-c> "+y
+" cannot use C-v for paste since it is used for visual selection
+noremap <C-p> "+P
+" for removing search highlight by hitting ESC
+nnoremap <esc> :noh<return><esc>
+nnoremap <leader>t :!$TERMCMD -d "%:p:h"&<CR><CR>
+" Configuration for zhou13/vim-easyescap/
+let g:easyescape_chars = { "j": 1, "k": 1 }
+let g:easyescape_timeout = 500
+cnoremap jk <ESC>
+cnoremap kj <ESC>
+" Remove all warnings by ALE (and Coc since they are redirected to ALE)
+nnoremap rr :ALEReset<CR>
 
 " Coc.nvim configurations (edited from the official github)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -251,42 +295,6 @@ if has('nvim')
   vnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#nvim_scroll(1, 1) : "\<C-f>"
   vnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#nvim_scroll(0, 1) : "\<C-b>"
 endif
-
-" APPEARANCE
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable true colors in terminal
-set termguicolors
-" sets theme
-colorscheme molokai
-" Since I am using termguicolors, I need to declare colors for gui not cterm!
-" Disable background to use transparency in terminal
-highlight Normal guibg=none
-" hide background in concealed text and change its color
-highlight Conceal guibg=none guifg=cyan
-
-" SHORTCUTS
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set the leader charachter to space
-let mapleader =" "
-" for tabs
-nnoremap <C-h> :tabp<CR>
-nnoremap <C-l> :tabn<CR>
-nnoremap <Tab> :tabedit<Space>
-" call the complier script and show the output
-nnoremap <leader>c : !compiler.sh %:p<CR>
-nnoremap <leader>p : !show_output.sh %:p<CR><CR>
-" configure cross-program copy-paste
-vnoremap <C-c> "+y
-" cannot use C-v for paste since it is used for visual selection
-noremap <C-p> "+P
-" for removing search highlight by hitting ESC
-nnoremap <esc> :noh<return><esc>
-nnoremap <leader>t :!$TERMCMD -d "%:p:h"&<CR><CR>
-" Configuration for zhou13/vim-easyescap/
-let g:easyescape_chars = { "j": 1, "k": 1 }
-let g:easyescape_timeout = 500
-cnoremap jk <ESC>
-cnoremap kj <ESC>
 
 " FILETYPE-SEPCIFIC CONF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
