@@ -1,8 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " SAUL NVIM CONFIG
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " must be before plugins are loaded
 " I use Coc for LSP
 let g:ale_disable_lsp = 1
@@ -131,6 +129,8 @@ let g:airline#extensions#coc#enabled = 1
 let g:ale_echo_msg_format = '[ALE] [%linter%] %s [%severity%]'
 " enable standard vimspector mappings
 let g:vimspector_enable_mappings = 'HUMAN'
+" set config file
+let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 
 " APPEARANCE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -333,8 +333,14 @@ function! CondaActivate()
     ALEReset
     ALELint
 endfunction
+function! CondaDeactivate()
+    !sed -i "s@\"python.pythonPath\":.*@\"python.pythonPath\": \"python\",@" "$HOME/.config/nvim/coc-settings.json"
+    ALEReset
+    ALELint
+endfunction
 autocmd FileType python nnoremap ca :call CondaActivate()<CR><CR>
-
+" reset the original python path for pyright
+autocmd FileType python call CondaDeactivate()
 
 " latex and biblatex
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -351,9 +357,11 @@ let g:tex_flavor = 'latex'
 autocmd VimLeave *.tex !texclear.sh %
 autocmd FileType tex nmap <Leader>f :call SyncTexForward()<CR>
 " to be same with the deafult linting
-autocmd FileType tex,bib set shiftwidth=8
+autocmd FileType tex set shiftwidth=8
 autocmd FileType tex,bib let b:delimitMate_quotes = "\" ' ` $"
 autocmd FileType tex,bib let b:delimitMate_smart_matchpairs = '^\%(\w\|\!\|[£]\|[^[:space:][:punct:]]\)'
+autocmd FileType bib set shiftwidth=2
+autocmd FileType bib set expandtab
 
 " markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
