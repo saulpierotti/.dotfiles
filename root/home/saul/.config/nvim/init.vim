@@ -170,6 +170,7 @@ cnoremap jk <ESC>
 cnoremap kj <ESC>
 " Remove all warnings by ALE (and Coc since they are redirected to ALE)
 nnoremap rr :ALEReset<CR>
+nnoremap nw :set nowrap<CR>
 
 " Coc.nvim configurations (edited from the official github)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

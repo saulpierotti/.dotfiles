@@ -128,6 +128,7 @@ The folder installed_packages is an update list of ll the packages present on my
       - After setting an env with vim-conda, it calls a script that overwrites the Coc config file
       - It sets `python.pythonPath` to what is selected by vim-conda
   - In general I am disabling the linting features of Coc since I prefer ALE for that
+- I use `puremourning/vimspector` for debugging
 - It is better to avoid using vim within a conda environment for problems with vim-conda and Coc.nvim
 
 ## Terminal
