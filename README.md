@@ -41,6 +41,8 @@ The folder installed_packages is an update list of ll the packages present on my
 ## Lock Screen and Screensaver
 
 - As a screen-locker I am using light-locker, which just redirects to the LightDM login page
+  - Light locker 1.9.0.3 has a bug that causes in a blank screen after unlock, reported in the Arch package page
+  - 1.9.0.2 works fine, and thus I added light-locker to the list of packages ignored by pacman in `/etc/pacman.conf`
 - The locker is called when xset (part of xorg) activates the screensaver
   - The screensaver activation behavior is managed permanently in `/etc/X11/xorg.conf.d/10-monitor.conf`
   - I can inspect the current settings with `xset q`
