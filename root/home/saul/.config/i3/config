@@ -108,6 +108,8 @@ for_window [title="Select entry type"]                  floating enable # jabref
 for_window [title="Error"]                              floating enable # jabref
 
 # ------------------------- AUTOSTART -------------------------
+# set screen resolution to single monitor mode
+exec --no-startup-id /home/saul/.screenlayout/single_monitor.sh
 # desktop compositor
 exec --no-startup-id picom
 # notification system
@@ -123,7 +125,8 @@ exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 # Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 # desktop widget
-exec --no-startup-id conky -d &
+# kill and reload is needed when playing with screen resolutions
+exec_always --no-startup-id killall conky; conky -d &
 # launches prime-offload when needed by optimus-manager
 # this is needed since optimus-manager does not run prime-offload after screen unlock
 # by forcing a reload of i3 I can run prime-offload

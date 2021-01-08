@@ -38,6 +38,18 @@ The folder installed_packages is an update list of ll the packages present on my
     - It is needed when I see a really long string in conky
 - For Nvidia I use the `nvidia-dkms` driver (since I am using the linux-zen kernel)
 
+## Dual monitor and resolution
+
+- In general monitors and resolutions are managed by xrandr
+- It is easier to use arandr to set the resolution correctly
+  - When using directly xrandr sometimes strange sovrappositions happen
+  - It is possible to save the arandr config as a simple xrandr script
+- By default arandr saves configurations in `~/.screenlayout/`
+  - I am keeping my configurations there
+  - To set a configuration just execute the appropriate script in `~/.screenlayout/`
+- The setting is not permanent after reboot
+  - I am running a config script (from arandr) in the i3 config at startup
+
 ## Lock Screen and Screensaver
 
 - As a screen-locker I am using light-locker, which just redirects to the LightDM login page
@@ -177,3 +189,9 @@ The folder installed_packages is an update list of ll the packages present on my
 - I edit in vim using the plugin vimtex, and ALE for linting
 - ALE uses latexindent, which is included in texlive-most, but misses the perl module `perl-log-dispatch` (in the AUR)
 - I use coc-texlab for completion
+
+## Desktop widget
+
+- I use conky, configured in `./config/conky/conky.conf`
+- When changing screen resolution or disposition the placement of the widget can be messed up
+  - I have a killall command in the i3 config followed by a call to conky, executed at each reload of i3
