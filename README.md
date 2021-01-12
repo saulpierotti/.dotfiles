@@ -177,7 +177,62 @@ The folder installed_packages is an update list of ll the packages present on my
 
 ## Media
 
+### Media player
+
 - I use mpv for videos with some configuration to improve quality at a performance cost (in `~/.config/mpv/mpv.conf`)
+
+### Video recording
+
+- I use OBS for video recording, but sometimes it crashes the PC unexpectedly
+- I can use the incorporated webcam without specific configures
+- Cheese (simple gnome video recorder) does not open correctly
+
+### Video conference
+
+- Most institution use zoom, so it is a must have
+  - I installed it as a flatpak, no problems so far
+  - AUR version can cause problems
+- Because of my university, I use Microsoft Teams
+  - I use also for this the flatpak
+
+### PDF presentation
+
+- I use pympress for my beamer presentations
+- To use with zoom share the pympress content window maximized in a second screen (or a virtual screen)
+
+### Screen sharing/recording
+
+- Sharing and recording are equivalent so here I will always talk about recording
+- Xorg does not render what is not on the current desktop, so it not possible to use the PC while recording something
+- I created a virtual desktop where I can place what I want to record so it is rendered even though it is not shown
+  - I use xrandr for this
+  - Just call the script `~/.screenlayout/virtual_screen_attached.sh` and then reload i3
+
+### Using Android phone as a virtual camera
+
+- I use Droidcam for this task
+- It must be installed on the phone and on PC (from AUR)
+- It works both with WiFi or USB
+- USB is more stable and what I usually use
+- WiFi works out of the box
+  - Since I am using a custom kernel, I need the video loopback dkms `v4l2loopback-dkms`
+  - Reboot after installing!
+- USB requires USB debugging enabled on the phone and on the PC `android-tools` and `android-udev` installed
+  - Enable also debugging security settings for the first connection, then you can disable it
+- Reboot!
+- Check that the phone is seen by running `adb devices`
+  - It should show `device` and not `unauthorized`
+- Add `options snd-aloop index=0` to `/etc/modprobe.d/droidcam.conf`
+- For the audio, it is needed to configure the alsa loopback device
+  - Add this to `~/.config/pulse/default.pa`
+
+```
+load-module module-alsa-source device=hw:Loopback,1,0
+update-source-proplist alsa_input.hw_Loopback_1_0  device.description="Droidcam"
+```
+
+- Restart pulseaudio with `pulseaudio -k`
+- Everything works only while the Droidcam app is running both on the phone and PC
 
 ## NordVPN
 
