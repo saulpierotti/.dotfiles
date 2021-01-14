@@ -211,6 +211,8 @@ The folder installed_packages is an update list of ll the packages present on my
 ### Using Android phone as a virtual camera
 
 - I use Droidcam for this task
+  - I bought the pro version for HD resolution since I really liked it
+- To use HD, change the resolution in `/etc/modprobe.d/droidcam.conf` to 1920x1080 (1080p) and set video quality to high in the app
 - It must be installed on the phone and on PC (from AUR)
 - It works both with WiFi or USB
 - USB is more stable and what I usually use
