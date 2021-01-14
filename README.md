@@ -232,6 +232,8 @@ update-source-proplist alsa_input.hw_Loopback_1_0  device.description="Droidcam"
 ```
 
 - Restart pulseaudio with `pulseaudio -k`
+- Audio is heavily distorted and I decided not to use it
+- I removed the modifications to pulseaudio configs
 - Everything works only while the Droidcam app is running both on the phone and PC
 
 ## NordVPN
