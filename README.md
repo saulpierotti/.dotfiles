@@ -15,6 +15,7 @@ The folder installed_packages is an update list of ll the packages present on my
   - ATTENTION: this overwrites the files in the system
 
 # TODO
+- Random freezes with OBS and zoom, maybe because of the kernel? Now I am trying LTS
 
 # Notes to Myself
 
@@ -27,6 +28,7 @@ The folder installed_packages is an update list of ll the packages present on my
 
 - I use linux-zen and I also installed its headers
 - I removed the vanilla kernel to avoid 2 lengthy compilations at every package update
+- I keep also the LTS kernel and its headers as a backup
 
 ## GPU
 
