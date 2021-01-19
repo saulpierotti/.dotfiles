@@ -1,6 +1,6 @@
 # GRUB boot loader configuration
 
-GRUB_DEFAULT="0"
+GRUB_DEFAULT="saved"
 GRUB_TIMEOUT="5"
 GRUB_DISTRIBUTOR="Arch"
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet apparmor=1 lsm=lockdown,yama,apparmor"
@@ -51,5 +51,5 @@ GRUB_THEME="/boot/grub/themes/arch-silence/theme.txt"
 
 # Uncomment to make GRUB remember the last selection. This requires
 # setting 'GRUB_DEFAULT=saved' above.
-#GRUB_SAVEDEFAULT="true"
+GRUB_SAVEDEFAULT="true"
 
