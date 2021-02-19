@@ -15,6 +15,7 @@ The folder installed_packages is an update list of ll the packages present on my
   - ATTENTION: this overwrites the files in the system
 
 # TODO
+
 - Random freezes with OBS and zoom, maybe because of the kernel? Now I am trying LTS
 
 # Notes to Myself
@@ -54,22 +55,23 @@ The folder installed_packages is an update list of ll the packages present on my
 
 ## Lock Screen and Screensaver
 
-- As a screen-locker I am using light-locker, which just redirects to the LightDM login page
-  - Light locker 1.9.0.3 has a bug that causes in a blank screen after unlock, reported in the Arch package page
-  - 1.9.0.2 works fine, and thus I added light-locker to the list of packages ignored by pacman in `/etc/pacman.conf`
-- The locker is called when xset (part of xorg) activates the screensaver
-  - The screensaver activation behavior is managed permanently in `/etc/X11/xorg.conf.d/10-monitor.conf`
-  - I can inspect the current settings with `xset q`
-- I can invoke the lock manually by calling `light-locker-command -l`
-- The command light-locker is a background process that needs to be in execution for the lock to work
-  - I execute it in the i3 config file
-  - The execution parameters of the command can tweak the behavior of the lock (when to lock after the X screensaver is activated)
-- For some strange reason, the login after lock is done in TTY8, while LightDM is on TTY7
-- Given the problem for TTY switching with Nvidia, do not use the lock when in Nvidia mode
-  - If the screen gets locked in nvidia mode: press space, then write the passwrd and press enter. The lockscreen is working even if the screen no
-  - After unlocking like this once, then the screen lock works in nvidia mode until the next logout
-- Inhibition of the lockscreen is done with exam_mode.sh and inhibited with exam_mode_undo.sh
-  - They just call xset and disable/enable blanking and screen poweroff
+- Because of all of these problems I switched to slock
+  - As a screen-locker I am using light-locker, which just redirects to the LightDM login page
+    - Light locker 1.9.0.3 has a bug that causes in a blank screen after unlock, reported in the Arch package page
+    - 1.9.0.2 works fine, and thus I added light-locker to he list of packages ignored by pacman in `/etc/pacman.conf`
+  - The locker is called when xset (part of xorg) activates the screensaver
+    - The screensaver activation behavior is managed permanently in `/etc/X11/xorg.conf.d/10-monitor.conf`
+    - I can inspect the current settings with `xset q`
+  - I can invoke the lock manually by calling `light-locker-command -l`
+  - The command light-locker is a background process that needs to be in execution for the lock to work
+    - I execute it in the i3 config file
+    - The execution parameters of the command can tweak the behavior of the lock (when to lock after the X screensaver is activated)
+  - For some strange reason, the login after lock is done in TTY8, while LightDM is on TTY7
+  - Given the problem for TTY switching with Nvidia, do not use the lock when in Nvidia mode
+    - If the screen gets locked in nvidia mode: press space, then write the passwrd and press enter. The lockscreen is working even if the screen no
+    - After unlocking like this once, then the screen lock works in nvidia mode until the next logout
+  - Inhibition of the lockscreen is done with exam_mode.sh and inhibited with exam_mode_undo.sh
+    - They just call xset and disable/enable blanking and screen poweroff
 
 ## Login Manager
 
