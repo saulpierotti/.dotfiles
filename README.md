@@ -55,7 +55,11 @@ The folder installed_packages is an update list of ll the packages present on my
 
 ## Lock Screen and Screensaver
 
-- Because of all of these problems I switched to slock
+- I use xautolock to launch slock
+  - xautolock is called from the i3 config file with the following parameters
+  - `exec --no-startup-id xautolock -locker slock -time 10 -corners 0+0- -cornerdelay 1 -cornerredelay 60`
+  - The top right corner triggers the lock after 1 second while the bottom right prevents the lock by placing the mouse in it
+- Because of all of these problems with loght-locker I switched to slock and xautolock
   - As a screen-locker I am using light-locker, which just redirects to the LightDM login page
     - Light locker 1.9.0.3 has a bug that causes in a blank screen after unlock, reported in the Arch package page
     - 1.9.0.2 works fine, and thus I added light-locker to he list of packages ignored by pacman in `/etc/pacman.conf`

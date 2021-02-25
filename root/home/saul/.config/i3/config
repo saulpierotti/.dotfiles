@@ -117,7 +117,8 @@ exec_always --no-startup-id .config/polybar/launch.sh &
 # polkit manages authentication for GUI apps
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # lockscreen
-exec --no-startup-id light-locker --late-locking --lock-after-screensaver=10
+# exec --no-startup-id light-locker --late-locking --lock-after-screensaver=10
+exec --no-startup-id xautolock -locker slock -time 10 -corners 0+0- -cornerdelay 1 -cornerredelay 60
 # Restore GNOME's settings
 exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 # Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
